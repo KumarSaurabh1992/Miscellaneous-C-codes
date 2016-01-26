@@ -1,0 +1,443 @@
+\hypertarget{class_compute_matrix}{}\section{Compute\+Matrix Class Reference}
+\label{class_compute_matrix}\index{Compute\+Matrix@{Compute\+Matrix}}
+
+
+This class computes the matrix for the poison process.  
+
+
+
+
+{\ttfamily \#include $<$Compute\+Matrix.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_compute_matrix_afb37e6716654b85a48c4feb6967ed473}{compute} ()
+\begin{DoxyCompactList}\small\item\em This is used to compute the matrix A and vector B when the grid is non -\/ uniform in both x and y coordinates. \end{DoxyCompactList}\item 
+void \hyperlink{class_compute_matrix_afb92e288133bac50dd7fd4ea44ddc648}{set\+\_\+number\+\_\+of\+\_\+division\+\_\+x} (int N)
+\begin{DoxyCompactList}\small\item\em this sets the number of x -\/ divisions and x-\/spacing \end{DoxyCompactList}\item 
+void \hyperlink{class_compute_matrix_a8f161a17f274122b4f17c4c90c288a54}{set\+\_\+number\+\_\+of\+\_\+division\+\_\+y} (int N)
+\begin{DoxyCompactList}\small\item\em This sets the number of y -\/ divisions and y-\/spacing. \end{DoxyCompactList}\item 
+int \hyperlink{class_compute_matrix_a35f69618292d8a05d78158715f1a8691}{get\+\_\+number\+\_\+of\+\_\+division\+\_\+x} ()
+\item 
+int \hyperlink{class_compute_matrix_af726fb06dd8cc67d1d52ec3b9357b287}{get\+\_\+number\+\_\+of\+\_\+division\+\_\+y} ()
+\item 
+float \hyperlink{class_compute_matrix_ac6cc697a109dfdc3a27a4ef2bc131b67}{get\+\_\+h} ()
+\item 
+float \hyperlink{class_compute_matrix_ac5fb641268db73cc0f376bf40e406d1f}{get\+\_\+k} ()
+\item 
+void \hyperlink{class_compute_matrix_a1a99ed8437d1922c9f7cdefe9584aba4}{compute\+\_\+matrix\+\_\+display} ()
+\begin{DoxyCompactList}\small\item\em Displays the sparse matrix. \end{DoxyCompactList}\item 
+void \hyperlink{class_compute_matrix_a4af38192571cbb800f3886083fb84d55}{solve\+\_\+iterative} ()
+\begin{DoxyCompactList}\small\item\em Solve the equation A\+X = B. \end{DoxyCompactList}\item 
+void \hyperlink{class_compute_matrix_a600edec6b742852a52f32d401bf80886}{compute\+\_\+general} ()
+\begin{DoxyCompactList}\small\item\em This is used to compute the matrix A and vector B when the grid is uniform in both x and y coordinates. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_compute_matrix_af7bd3f9c853300923172a5385e4902a7}{set\+\_\+boundary\+\_\+size} (int N)
+\begin{DoxyCompactList}\small\item\em Allocates the space for the boundary vectors. \end{DoxyCompactList}\item 
+void \hyperlink{class_compute_matrix_abecc229bc9d68c7106ffc8c23cece474}{compute\+\_\+h} ()
+\begin{DoxyCompactList}\small\item\em It creates the vector containing the information about spacing in the x direction. \end{DoxyCompactList}\item 
+void \hyperlink{class_compute_matrix_a60e30b3d8215425fb86880c72507c290}{compute\+\_\+k} ()
+\begin{DoxyCompactList}\small\item\em It creates the vector containing information about spacing in the y -\/ direction. \end{DoxyCompactList}\item 
+double \hyperlink{class_compute_matrix_a4017aead911acf0cf8507436049f1d8e}{get\+\_\+h\+\_\+before} (int)
+\begin{DoxyCompactList}\small\item\em At a particular point, it returns the spacing in the left direction. \end{DoxyCompactList}\item 
+double \hyperlink{class_compute_matrix_a71153b108b46b7863ff9ee93733991ce}{get\+\_\+h\+\_\+after} (int)
+\begin{DoxyCompactList}\small\item\em At a particular point, it returns the spacing in the right direction. \end{DoxyCompactList}\item 
+double \hyperlink{class_compute_matrix_a505ffbdcec8dc113d9594549a411814e}{get\+\_\+k\+\_\+before} (int)
+\begin{DoxyCompactList}\small\item\em At a particular point, it returns the spacing in the bottom direction. \end{DoxyCompactList}\item 
+double \hyperlink{class_compute_matrix_aca571a6ea7337ea7a2e581eeb29c3edb}{get\+\_\+k\+\_\+after} (int)
+\begin{DoxyCompactList}\small\item\em At a particular point, it returns the spacing in the top direction. \end{DoxyCompactList}\item 
+void \hyperlink{class_compute_matrix_a01bd56d57608380a263f0ae4701a2634}{get\+\_\+boundary\+\_\+condition} ()
+\begin{DoxyCompactList}\small\item\em This takes the nput about the boundary condition. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_sparse_matrix}{Sparse\+Matrix} \hyperlink{class_compute_matrix_adfd277a6083ab558b0d5dc2fc5ff5230}{spm}
+\begin{DoxyCompactList}\small\item\em A in sparse Matrix Form. \end{DoxyCompactList}\item 
+int \hyperlink{class_compute_matrix_a0734d77fb41d28f70ead13cf77c6b1d8}{number\+\_\+of\+\_\+divisions\+\_\+x}
+\begin{DoxyCompactList}\small\item\em Number of x divisions. \end{DoxyCompactList}\item 
+int \hyperlink{class_compute_matrix_a5e5eb85861b987d80caf668424f26046}{number\+\_\+of\+\_\+divisions\+\_\+y}
+\begin{DoxyCompactList}\small\item\em Number of y divisions. \end{DoxyCompactList}\item 
+double \hyperlink{class_compute_matrix_ae43490e192b2e3ea685e7cf7c35186a8}{h}
+\begin{DoxyCompactList}\small\item\em x spacing \end{DoxyCompactList}\item 
+double \hyperlink{class_compute_matrix_ae498ccb8e95e23dcf562c310fba18b6c}{k}
+\begin{DoxyCompactList}\small\item\em y spacing \end{DoxyCompactList}\item 
+\hyperlink{class_vector}{Vector}$<$ double $>$ \hyperlink{class_compute_matrix_a95446381371c34e298a9483ae9264a19}{B}
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_vector}{Vector} B in A\+X = B. \end{DoxyCompactList}\item 
+\hyperlink{class_vector}{Vector}$<$ double $>$ \hyperlink{class_compute_matrix_a7dab716b72de86553d960aead1497bdf}{X}
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_vector}{Vector} X in A\+X = B. \end{DoxyCompactList}\item 
+\hyperlink{class_vector}{Vector}$<$ double $>$ \hyperlink{class_compute_matrix_a996dc180f923f06e05f8bbdacd377c5b}{alpha}
+\begin{DoxyCompactList}\small\item\em Value of alpha in the boundary condition of all the faces. \end{DoxyCompactList}\item 
+\hyperlink{class_vector}{Vector}$<$ double $>$ \hyperlink{class_compute_matrix_a870eba0db8cadb9bb5297250b33b8110}{beeta}
+\begin{DoxyCompactList}\small\item\em Value of beta in the boundary condition of all the faces. \end{DoxyCompactList}\item 
+\hyperlink{class_vector}{Vector}$<$ double $>$ \hyperlink{class_compute_matrix_a4ce47d86505bff39d030ee28dceb1ca4}{gama}
+\begin{DoxyCompactList}\small\item\em Value of gama in the boundary condition of all the faces. \end{DoxyCompactList}\item 
+double $\ast$$\ast$ \hyperlink{class_compute_matrix_a85b0f0b3ccd0fad1218d7ca78c34c7d9}{x\+\_\+spacing}
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_vector}{Vector} containing different x spacing. \end{DoxyCompactList}\item 
+double $\ast$$\ast$ \hyperlink{class_compute_matrix_a1b6929ee0703c5394e8af381ff870012}{y\+\_\+spacing}
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_vector}{Vector} containing various y spacing. \end{DoxyCompactList}\item 
+int \hyperlink{class_compute_matrix_ae56d59f2a47b7f6f55a1612172720852}{number\+\_\+of\+\_\+x}
+\begin{DoxyCompactList}\small\item\em number of different spacing in x \end{DoxyCompactList}\item 
+int \hyperlink{class_compute_matrix_a0efb5ccd0d7d26dd879b0095f982b639}{number\+\_\+of\+\_\+y}
+\begin{DoxyCompactList}\small\item\em number of different spacing in y \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class computes the matrix for the poison process. 
+
+\begin{DoxyAuthor}{Author}
+Kumar Saurabh (M\+A14\+M004) 
+\end{DoxyAuthor}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_compute_matrix_afb37e6716654b85a48c4feb6967ed473}{}\index{Compute\+Matrix@{Compute\+Matrix}!compute@{compute}}
+\index{compute@{compute}!Compute\+Matrix@{Compute\+Matrix}}
+\subsubsection[{compute}]{\setlength{\rightskip}{0pt plus 5cm}void Compute\+Matrix\+::compute (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_compute_matrix_afb37e6716654b85a48c4feb6967ed473}
+
+
+This is used to compute the matrix A and vector B when the grid is non -\/ uniform in both x and y coordinates. 
+
+Matrix A is stored in sparse form.
+
+\hyperlink{class_vector}{Vector} X is initialized to 0 \hypertarget{class_compute_matrix_a600edec6b742852a52f32d401bf80886}{}\index{Compute\+Matrix@{Compute\+Matrix}!compute\+\_\+general@{compute\+\_\+general}}
+\index{compute\+\_\+general@{compute\+\_\+general}!Compute\+Matrix@{Compute\+Matrix}}
+\subsubsection[{compute\+\_\+general}]{\setlength{\rightskip}{0pt plus 5cm}void Compute\+Matrix\+::compute\+\_\+general (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_compute_matrix_a600edec6b742852a52f32d401bf80886}
+
+
+This is used to compute the matrix A and vector B when the grid is uniform in both x and y coordinates. 
+
+Matrix A is stored in sparse form.
+
+\hyperlink{class_vector}{Vector} X is initialized to 0 \hypertarget{class_compute_matrix_abecc229bc9d68c7106ffc8c23cece474}{}\index{Compute\+Matrix@{Compute\+Matrix}!compute\+\_\+h@{compute\+\_\+h}}
+\index{compute\+\_\+h@{compute\+\_\+h}!Compute\+Matrix@{Compute\+Matrix}}
+\subsubsection[{compute\+\_\+h}]{\setlength{\rightskip}{0pt plus 5cm}void Compute\+Matrix\+::compute\+\_\+h (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_compute_matrix_abecc229bc9d68c7106ffc8c23cece474}
+
+
+It creates the vector containing the information about spacing in the x direction. 
+
+\hypertarget{class_compute_matrix_a60e30b3d8215425fb86880c72507c290}{}\index{Compute\+Matrix@{Compute\+Matrix}!compute\+\_\+k@{compute\+\_\+k}}
+\index{compute\+\_\+k@{compute\+\_\+k}!Compute\+Matrix@{Compute\+Matrix}}
+\subsubsection[{compute\+\_\+k}]{\setlength{\rightskip}{0pt plus 5cm}void Compute\+Matrix\+::compute\+\_\+k (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_compute_matrix_a60e30b3d8215425fb86880c72507c290}
+
+
+It creates the vector containing information about spacing in the y -\/ direction. 
+
+\hypertarget{class_compute_matrix_a1a99ed8437d1922c9f7cdefe9584aba4}{}\index{Compute\+Matrix@{Compute\+Matrix}!compute\+\_\+matrix\+\_\+display@{compute\+\_\+matrix\+\_\+display}}
+\index{compute\+\_\+matrix\+\_\+display@{compute\+\_\+matrix\+\_\+display}!Compute\+Matrix@{Compute\+Matrix}}
+\subsubsection[{compute\+\_\+matrix\+\_\+display}]{\setlength{\rightskip}{0pt plus 5cm}void Compute\+Matrix\+::compute\+\_\+matrix\+\_\+display (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_compute_matrix_a1a99ed8437d1922c9f7cdefe9584aba4}
+
+
+Displays the sparse matrix. 
+
+\hypertarget{class_compute_matrix_a01bd56d57608380a263f0ae4701a2634}{}\index{Compute\+Matrix@{Compute\+Matrix}!get\+\_\+boundary\+\_\+condition@{get\+\_\+boundary\+\_\+condition}}
+\index{get\+\_\+boundary\+\_\+condition@{get\+\_\+boundary\+\_\+condition}!Compute\+Matrix@{Compute\+Matrix}}
+\subsubsection[{get\+\_\+boundary\+\_\+condition}]{\setlength{\rightskip}{0pt plus 5cm}void Compute\+Matrix\+::get\+\_\+boundary\+\_\+condition (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_compute_matrix_a01bd56d57608380a263f0ae4701a2634}
+
+
+This takes the nput about the boundary condition. 
+
+Boundary condition is given in form of alpha$\ast$u + beeta$\ast$u\textquotesingle{} = gama
+
+The user inputs the boundary condition in the following order\+: bottom, right, top, left \hypertarget{class_compute_matrix_ac6cc697a109dfdc3a27a4ef2bc131b67}{}\index{Compute\+Matrix@{Compute\+Matrix}!get\+\_\+h@{get\+\_\+h}}
+\index{get\+\_\+h@{get\+\_\+h}!Compute\+Matrix@{Compute\+Matrix}}
+\subsubsection[{get\+\_\+h}]{\setlength{\rightskip}{0pt plus 5cm}float Compute\+Matrix\+::get\+\_\+h (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_compute_matrix_ac6cc697a109dfdc3a27a4ef2bc131b67}
+\hypertarget{class_compute_matrix_a71153b108b46b7863ff9ee93733991ce}{}\index{Compute\+Matrix@{Compute\+Matrix}!get\+\_\+h\+\_\+after@{get\+\_\+h\+\_\+after}}
+\index{get\+\_\+h\+\_\+after@{get\+\_\+h\+\_\+after}!Compute\+Matrix@{Compute\+Matrix}}
+\subsubsection[{get\+\_\+h\+\_\+after}]{\setlength{\rightskip}{0pt plus 5cm}double Compute\+Matrix\+::get\+\_\+h\+\_\+after (
+\begin{DoxyParamCaption}
+\item[{int}]{x\+\_\+division}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_compute_matrix_a71153b108b46b7863ff9ee93733991ce}
+
+
+At a particular point, it returns the spacing in the right direction. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x\+\_\+division} & the point of our interest\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the right x-\/spacing of that point 
+\end{DoxyReturn}
+\hypertarget{class_compute_matrix_a4017aead911acf0cf8507436049f1d8e}{}\index{Compute\+Matrix@{Compute\+Matrix}!get\+\_\+h\+\_\+before@{get\+\_\+h\+\_\+before}}
+\index{get\+\_\+h\+\_\+before@{get\+\_\+h\+\_\+before}!Compute\+Matrix@{Compute\+Matrix}}
+\subsubsection[{get\+\_\+h\+\_\+before}]{\setlength{\rightskip}{0pt plus 5cm}double Compute\+Matrix\+::get\+\_\+h\+\_\+before (
+\begin{DoxyParamCaption}
+\item[{int}]{x\+\_\+division}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_compute_matrix_a4017aead911acf0cf8507436049f1d8e}
+
+
+At a particular point, it returns the spacing in the left direction. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x\+\_\+division} & the point of our interest\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the left x-\/spacing of that point 
+\end{DoxyReturn}
+\hypertarget{class_compute_matrix_ac5fb641268db73cc0f376bf40e406d1f}{}\index{Compute\+Matrix@{Compute\+Matrix}!get\+\_\+k@{get\+\_\+k}}
+\index{get\+\_\+k@{get\+\_\+k}!Compute\+Matrix@{Compute\+Matrix}}
+\subsubsection[{get\+\_\+k}]{\setlength{\rightskip}{0pt plus 5cm}float Compute\+Matrix\+::get\+\_\+k (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_compute_matrix_ac5fb641268db73cc0f376bf40e406d1f}
+\hypertarget{class_compute_matrix_aca571a6ea7337ea7a2e581eeb29c3edb}{}\index{Compute\+Matrix@{Compute\+Matrix}!get\+\_\+k\+\_\+after@{get\+\_\+k\+\_\+after}}
+\index{get\+\_\+k\+\_\+after@{get\+\_\+k\+\_\+after}!Compute\+Matrix@{Compute\+Matrix}}
+\subsubsection[{get\+\_\+k\+\_\+after}]{\setlength{\rightskip}{0pt plus 5cm}double Compute\+Matrix\+::get\+\_\+k\+\_\+after (
+\begin{DoxyParamCaption}
+\item[{int}]{y\+\_\+division}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_compute_matrix_aca571a6ea7337ea7a2e581eeb29c3edb}
+
+
+At a particular point, it returns the spacing in the top direction. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em y\+\_\+division} & the point of our interest\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the top y-\/spacing of that point 
+\end{DoxyReturn}
+\hypertarget{class_compute_matrix_a505ffbdcec8dc113d9594549a411814e}{}\index{Compute\+Matrix@{Compute\+Matrix}!get\+\_\+k\+\_\+before@{get\+\_\+k\+\_\+before}}
+\index{get\+\_\+k\+\_\+before@{get\+\_\+k\+\_\+before}!Compute\+Matrix@{Compute\+Matrix}}
+\subsubsection[{get\+\_\+k\+\_\+before}]{\setlength{\rightskip}{0pt plus 5cm}double Compute\+Matrix\+::get\+\_\+k\+\_\+before (
+\begin{DoxyParamCaption}
+\item[{int}]{y\+\_\+division}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_compute_matrix_a505ffbdcec8dc113d9594549a411814e}
+
+
+At a particular point, it returns the spacing in the bottom direction. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em y\+\_\+division} & the point of our interest\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the bottom y-\/spacing of that point 
+\end{DoxyReturn}
+\hypertarget{class_compute_matrix_a35f69618292d8a05d78158715f1a8691}{}\index{Compute\+Matrix@{Compute\+Matrix}!get\+\_\+number\+\_\+of\+\_\+division\+\_\+x@{get\+\_\+number\+\_\+of\+\_\+division\+\_\+x}}
+\index{get\+\_\+number\+\_\+of\+\_\+division\+\_\+x@{get\+\_\+number\+\_\+of\+\_\+division\+\_\+x}!Compute\+Matrix@{Compute\+Matrix}}
+\subsubsection[{get\+\_\+number\+\_\+of\+\_\+division\+\_\+x}]{\setlength{\rightskip}{0pt plus 5cm}int Compute\+Matrix\+::get\+\_\+number\+\_\+of\+\_\+division\+\_\+x (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_compute_matrix_a35f69618292d8a05d78158715f1a8691}
+\begin{DoxyReturn}{Returns}
+number of x -\/ divisions 
+\end{DoxyReturn}
+\hypertarget{class_compute_matrix_af726fb06dd8cc67d1d52ec3b9357b287}{}\index{Compute\+Matrix@{Compute\+Matrix}!get\+\_\+number\+\_\+of\+\_\+division\+\_\+y@{get\+\_\+number\+\_\+of\+\_\+division\+\_\+y}}
+\index{get\+\_\+number\+\_\+of\+\_\+division\+\_\+y@{get\+\_\+number\+\_\+of\+\_\+division\+\_\+y}!Compute\+Matrix@{Compute\+Matrix}}
+\subsubsection[{get\+\_\+number\+\_\+of\+\_\+division\+\_\+y}]{\setlength{\rightskip}{0pt plus 5cm}int Compute\+Matrix\+::get\+\_\+number\+\_\+of\+\_\+division\+\_\+y (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_compute_matrix_af726fb06dd8cc67d1d52ec3b9357b287}
+\begin{DoxyReturn}{Returns}
+number of y -\/ divisions 
+\end{DoxyReturn}
+\hypertarget{class_compute_matrix_af7bd3f9c853300923172a5385e4902a7}{}\index{Compute\+Matrix@{Compute\+Matrix}!set\+\_\+boundary\+\_\+size@{set\+\_\+boundary\+\_\+size}}
+\index{set\+\_\+boundary\+\_\+size@{set\+\_\+boundary\+\_\+size}!Compute\+Matrix@{Compute\+Matrix}}
+\subsubsection[{set\+\_\+boundary\+\_\+size}]{\setlength{\rightskip}{0pt plus 5cm}void Compute\+Matrix\+::set\+\_\+boundary\+\_\+size (
+\begin{DoxyParamCaption}
+\item[{int}]{N}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_compute_matrix_af7bd3f9c853300923172a5385e4902a7}
+
+
+Allocates the space for the boundary vectors. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em N} & number of boundaries for the domain \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_compute_matrix_afb92e288133bac50dd7fd4ea44ddc648}{}\index{Compute\+Matrix@{Compute\+Matrix}!set\+\_\+number\+\_\+of\+\_\+division\+\_\+x@{set\+\_\+number\+\_\+of\+\_\+division\+\_\+x}}
+\index{set\+\_\+number\+\_\+of\+\_\+division\+\_\+x@{set\+\_\+number\+\_\+of\+\_\+division\+\_\+x}!Compute\+Matrix@{Compute\+Matrix}}
+\subsubsection[{set\+\_\+number\+\_\+of\+\_\+division\+\_\+x}]{\setlength{\rightskip}{0pt plus 5cm}void Compute\+Matrix\+::set\+\_\+number\+\_\+of\+\_\+division\+\_\+x (
+\begin{DoxyParamCaption}
+\item[{int}]{N}
+\end{DoxyParamCaption}
+)}\label{class_compute_matrix_afb92e288133bac50dd7fd4ea44ddc648}
+
+
+this sets the number of x -\/ divisions and x-\/spacing 
+
+
+\begin{DoxyParams}{Parameters}
+{\em N} & number of X -\/ divisions \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_compute_matrix_a8f161a17f274122b4f17c4c90c288a54}{}\index{Compute\+Matrix@{Compute\+Matrix}!set\+\_\+number\+\_\+of\+\_\+division\+\_\+y@{set\+\_\+number\+\_\+of\+\_\+division\+\_\+y}}
+\index{set\+\_\+number\+\_\+of\+\_\+division\+\_\+y@{set\+\_\+number\+\_\+of\+\_\+division\+\_\+y}!Compute\+Matrix@{Compute\+Matrix}}
+\subsubsection[{set\+\_\+number\+\_\+of\+\_\+division\+\_\+y}]{\setlength{\rightskip}{0pt plus 5cm}void Compute\+Matrix\+::set\+\_\+number\+\_\+of\+\_\+division\+\_\+y (
+\begin{DoxyParamCaption}
+\item[{int}]{N}
+\end{DoxyParamCaption}
+)}\label{class_compute_matrix_a8f161a17f274122b4f17c4c90c288a54}
+
+
+This sets the number of y -\/ divisions and y-\/spacing. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em N} & number of y -\/ divisions \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_compute_matrix_a4af38192571cbb800f3886083fb84d55}{}\index{Compute\+Matrix@{Compute\+Matrix}!solve\+\_\+iterative@{solve\+\_\+iterative}}
+\index{solve\+\_\+iterative@{solve\+\_\+iterative}!Compute\+Matrix@{Compute\+Matrix}}
+\subsubsection[{solve\+\_\+iterative}]{\setlength{\rightskip}{0pt plus 5cm}void Compute\+Matrix\+::solve\+\_\+iterative (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_compute_matrix_a4af38192571cbb800f3886083fb84d55}
+
+
+Solve the equation A\+X = B. 
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_compute_matrix_a996dc180f923f06e05f8bbdacd377c5b}{}\index{Compute\+Matrix@{Compute\+Matrix}!alpha@{alpha}}
+\index{alpha@{alpha}!Compute\+Matrix@{Compute\+Matrix}}
+\subsubsection[{alpha}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vector}$<$double$>$ Compute\+Matrix\+::alpha\hspace{0.3cm}{\ttfamily [private]}}\label{class_compute_matrix_a996dc180f923f06e05f8bbdacd377c5b}
+
+
+Value of alpha in the boundary condition of all the faces. 
+
+\hypertarget{class_compute_matrix_a95446381371c34e298a9483ae9264a19}{}\index{Compute\+Matrix@{Compute\+Matrix}!B@{B}}
+\index{B@{B}!Compute\+Matrix@{Compute\+Matrix}}
+\subsubsection[{B}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vector}$<$double$>$ Compute\+Matrix\+::\+B\hspace{0.3cm}{\ttfamily [private]}}\label{class_compute_matrix_a95446381371c34e298a9483ae9264a19}
+
+
+\hyperlink{class_vector}{Vector} B in A\+X = B. 
+
+\hypertarget{class_compute_matrix_a870eba0db8cadb9bb5297250b33b8110}{}\index{Compute\+Matrix@{Compute\+Matrix}!beeta@{beeta}}
+\index{beeta@{beeta}!Compute\+Matrix@{Compute\+Matrix}}
+\subsubsection[{beeta}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vector}$<$double$>$ Compute\+Matrix\+::beeta\hspace{0.3cm}{\ttfamily [private]}}\label{class_compute_matrix_a870eba0db8cadb9bb5297250b33b8110}
+
+
+Value of beta in the boundary condition of all the faces. 
+
+\hypertarget{class_compute_matrix_a4ce47d86505bff39d030ee28dceb1ca4}{}\index{Compute\+Matrix@{Compute\+Matrix}!gama@{gama}}
+\index{gama@{gama}!Compute\+Matrix@{Compute\+Matrix}}
+\subsubsection[{gama}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vector}$<$double$>$ Compute\+Matrix\+::gama\hspace{0.3cm}{\ttfamily [private]}}\label{class_compute_matrix_a4ce47d86505bff39d030ee28dceb1ca4}
+
+
+Value of gama in the boundary condition of all the faces. 
+
+\hypertarget{class_compute_matrix_ae43490e192b2e3ea685e7cf7c35186a8}{}\index{Compute\+Matrix@{Compute\+Matrix}!h@{h}}
+\index{h@{h}!Compute\+Matrix@{Compute\+Matrix}}
+\subsubsection[{h}]{\setlength{\rightskip}{0pt plus 5cm}double Compute\+Matrix\+::h\hspace{0.3cm}{\ttfamily [private]}}\label{class_compute_matrix_ae43490e192b2e3ea685e7cf7c35186a8}
+
+
+x spacing 
+
+\hypertarget{class_compute_matrix_ae498ccb8e95e23dcf562c310fba18b6c}{}\index{Compute\+Matrix@{Compute\+Matrix}!k@{k}}
+\index{k@{k}!Compute\+Matrix@{Compute\+Matrix}}
+\subsubsection[{k}]{\setlength{\rightskip}{0pt plus 5cm}double Compute\+Matrix\+::k\hspace{0.3cm}{\ttfamily [private]}}\label{class_compute_matrix_ae498ccb8e95e23dcf562c310fba18b6c}
+
+
+y spacing 
+
+\hypertarget{class_compute_matrix_a0734d77fb41d28f70ead13cf77c6b1d8}{}\index{Compute\+Matrix@{Compute\+Matrix}!number\+\_\+of\+\_\+divisions\+\_\+x@{number\+\_\+of\+\_\+divisions\+\_\+x}}
+\index{number\+\_\+of\+\_\+divisions\+\_\+x@{number\+\_\+of\+\_\+divisions\+\_\+x}!Compute\+Matrix@{Compute\+Matrix}}
+\subsubsection[{number\+\_\+of\+\_\+divisions\+\_\+x}]{\setlength{\rightskip}{0pt plus 5cm}int Compute\+Matrix\+::number\+\_\+of\+\_\+divisions\+\_\+x\hspace{0.3cm}{\ttfamily [private]}}\label{class_compute_matrix_a0734d77fb41d28f70ead13cf77c6b1d8}
+
+
+Number of x divisions. 
+
+\hypertarget{class_compute_matrix_a5e5eb85861b987d80caf668424f26046}{}\index{Compute\+Matrix@{Compute\+Matrix}!number\+\_\+of\+\_\+divisions\+\_\+y@{number\+\_\+of\+\_\+divisions\+\_\+y}}
+\index{number\+\_\+of\+\_\+divisions\+\_\+y@{number\+\_\+of\+\_\+divisions\+\_\+y}!Compute\+Matrix@{Compute\+Matrix}}
+\subsubsection[{number\+\_\+of\+\_\+divisions\+\_\+y}]{\setlength{\rightskip}{0pt plus 5cm}int Compute\+Matrix\+::number\+\_\+of\+\_\+divisions\+\_\+y\hspace{0.3cm}{\ttfamily [private]}}\label{class_compute_matrix_a5e5eb85861b987d80caf668424f26046}
+
+
+Number of y divisions. 
+
+\hypertarget{class_compute_matrix_ae56d59f2a47b7f6f55a1612172720852}{}\index{Compute\+Matrix@{Compute\+Matrix}!number\+\_\+of\+\_\+x@{number\+\_\+of\+\_\+x}}
+\index{number\+\_\+of\+\_\+x@{number\+\_\+of\+\_\+x}!Compute\+Matrix@{Compute\+Matrix}}
+\subsubsection[{number\+\_\+of\+\_\+x}]{\setlength{\rightskip}{0pt plus 5cm}int Compute\+Matrix\+::number\+\_\+of\+\_\+x\hspace{0.3cm}{\ttfamily [private]}}\label{class_compute_matrix_ae56d59f2a47b7f6f55a1612172720852}
+
+
+number of different spacing in x 
+
+\hypertarget{class_compute_matrix_a0efb5ccd0d7d26dd879b0095f982b639}{}\index{Compute\+Matrix@{Compute\+Matrix}!number\+\_\+of\+\_\+y@{number\+\_\+of\+\_\+y}}
+\index{number\+\_\+of\+\_\+y@{number\+\_\+of\+\_\+y}!Compute\+Matrix@{Compute\+Matrix}}
+\subsubsection[{number\+\_\+of\+\_\+y}]{\setlength{\rightskip}{0pt plus 5cm}int Compute\+Matrix\+::number\+\_\+of\+\_\+y\hspace{0.3cm}{\ttfamily [private]}}\label{class_compute_matrix_a0efb5ccd0d7d26dd879b0095f982b639}
+
+
+number of different spacing in y 
+
+\hypertarget{class_compute_matrix_adfd277a6083ab558b0d5dc2fc5ff5230}{}\index{Compute\+Matrix@{Compute\+Matrix}!spm@{spm}}
+\index{spm@{spm}!Compute\+Matrix@{Compute\+Matrix}}
+\subsubsection[{spm}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Sparse\+Matrix} Compute\+Matrix\+::spm\hspace{0.3cm}{\ttfamily [private]}}\label{class_compute_matrix_adfd277a6083ab558b0d5dc2fc5ff5230}
+
+
+A in sparse Matrix Form. 
+
+\hypertarget{class_compute_matrix_a7dab716b72de86553d960aead1497bdf}{}\index{Compute\+Matrix@{Compute\+Matrix}!X@{X}}
+\index{X@{X}!Compute\+Matrix@{Compute\+Matrix}}
+\subsubsection[{X}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vector}$<$double$>$ Compute\+Matrix\+::\+X\hspace{0.3cm}{\ttfamily [private]}}\label{class_compute_matrix_a7dab716b72de86553d960aead1497bdf}
+
+
+\hyperlink{class_vector}{Vector} X in A\+X = B. 
+
+\hypertarget{class_compute_matrix_a85b0f0b3ccd0fad1218d7ca78c34c7d9}{}\index{Compute\+Matrix@{Compute\+Matrix}!x\+\_\+spacing@{x\+\_\+spacing}}
+\index{x\+\_\+spacing@{x\+\_\+spacing}!Compute\+Matrix@{Compute\+Matrix}}
+\subsubsection[{x\+\_\+spacing}]{\setlength{\rightskip}{0pt plus 5cm}double$\ast$$\ast$ Compute\+Matrix\+::x\+\_\+spacing\hspace{0.3cm}{\ttfamily [private]}}\label{class_compute_matrix_a85b0f0b3ccd0fad1218d7ca78c34c7d9}
+
+
+\hyperlink{class_vector}{Vector} containing different x spacing. 
+
+\hypertarget{class_compute_matrix_a1b6929ee0703c5394e8af381ff870012}{}\index{Compute\+Matrix@{Compute\+Matrix}!y\+\_\+spacing@{y\+\_\+spacing}}
+\index{y\+\_\+spacing@{y\+\_\+spacing}!Compute\+Matrix@{Compute\+Matrix}}
+\subsubsection[{y\+\_\+spacing}]{\setlength{\rightskip}{0pt plus 5cm}double$\ast$$\ast$ Compute\+Matrix\+::y\+\_\+spacing\hspace{0.3cm}{\ttfamily [private]}}\label{class_compute_matrix_a1b6929ee0703c5394e8af381ff870012}
+
+
+\hyperlink{class_vector}{Vector} containing various y spacing. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_compute_matrix_8h}{Compute\+Matrix.\+h}\item 
+\hyperlink{_compute_matrix_8cpp}{Compute\+Matrix.\+cpp}\end{DoxyCompactItemize}

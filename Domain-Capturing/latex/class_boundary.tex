@@ -1,0 +1,166 @@
+\hypertarget{class_boundary}{}\section{Boundary Class Reference}
+\label{class_boundary}\index{Boundary@{Boundary}}
+
+
+{\ttfamily \#include $<$Boundary.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_boundary_a809810ee0436124876ee18d0026d52d4}{set\+\_\+size} (int N)
+\item 
+void \hyperlink{class_boundary_abd07c6ec01953355779802ceefa6cf45}{set\+\_\+\+Boundary\+\_\+\+Points} ()
+\item 
+int \hyperlink{class_boundary_aa8c6fd642200c117cd40fb96f6ea7125}{get\+\_\+number\+\_\+of\+\_\+points} ()
+\item 
+void \hyperlink{class_boundary_a41a9097d2719db8755135ab1f6cc5dae}{display\+\_\+points} ()
+\item 
+void \hyperlink{class_boundary_acfc57bff0ea604020c6af6326559adea}{boundary\+\_\+choices} ()
+\item 
+void \hyperlink{class_boundary_a7611f77aad78315d4393aa2bf6c4102a}{display\+\_\+boundary\+\_\+points} (int index1, int index2)
+\item 
+void \hyperlink{class_boundary_ac6efa301f35e2a16f679812b5ae9f3c0}{display\+\_\+which\+\_\+curve} ()
+\item 
+void \hyperlink{class_boundary_ace24f1af65c2bd016b0d07b8672c7cf7}{set\+\_\+number\+\_\+of\+\_\+compartments} (int i, int j)
+\item 
+void \hyperlink{class_boundary_a46f816bb8cd7d30f6ee610911f09dd3c}{set\+\_\+number\+\_\+of\+\_\+initial\+\_\+compartments} (int N)
+\item 
+int \hyperlink{class_boundary_a53c3c48ca4535bb1f4727a81ecf520a2}{get\+\_\+number\+\_\+of\+\_\+compartments} ()
+\item 
+void \hyperlink{class_boundary_a13e26d040c633adb3092e8fb0877f783}{make\+\_\+grid\+\_\+choice} (ofstream \&outfile)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_domain}{Domain} $\ast$ \hyperlink{class_boundary_afe159eca3abe85fd1e12c34842552a84}{points}
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_boundary_a5195aca0ac29b7c335e206a5c0052c12}{get\+\_\+compartment} (int i)
+\item 
+void \hyperlink{class_boundary_abb65524d1d39c4e8d304acc7b9c71c47}{post\+\_\+grid\+\_\+opeartion} (int index1, int index2, int choice)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_boundary_a216a0f808019a2383c3c4da1014b4b9f}{number\+\_\+of\+\_\+points}
+\item 
+int \hyperlink{class_boundary_a7e69dfe35213b6c0bef5a1479081f1a5}{number\+\_\+of\+\_\+compartments}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_boundary_acfc57bff0ea604020c6af6326559adea}{}\index{Boundary@{Boundary}!boundary\+\_\+choices@{boundary\+\_\+choices}}
+\index{boundary\+\_\+choices@{boundary\+\_\+choices}!Boundary@{Boundary}}
+\subsubsection[{boundary\+\_\+choices}]{\setlength{\rightskip}{0pt plus 5cm}void Boundary\+::boundary\+\_\+choices (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_boundary_acfc57bff0ea604020c6af6326559adea}
+\hypertarget{class_boundary_a7611f77aad78315d4393aa2bf6c4102a}{}\index{Boundary@{Boundary}!display\+\_\+boundary\+\_\+points@{display\+\_\+boundary\+\_\+points}}
+\index{display\+\_\+boundary\+\_\+points@{display\+\_\+boundary\+\_\+points}!Boundary@{Boundary}}
+\subsubsection[{display\+\_\+boundary\+\_\+points}]{\setlength{\rightskip}{0pt plus 5cm}void Boundary\+::display\+\_\+boundary\+\_\+points (
+\begin{DoxyParamCaption}
+\item[{int}]{index1, }
+\item[{int}]{index2}
+\end{DoxyParamCaption}
+)}\label{class_boundary_a7611f77aad78315d4393aa2bf6c4102a}
+\hypertarget{class_boundary_a41a9097d2719db8755135ab1f6cc5dae}{}\index{Boundary@{Boundary}!display\+\_\+points@{display\+\_\+points}}
+\index{display\+\_\+points@{display\+\_\+points}!Boundary@{Boundary}}
+\subsubsection[{display\+\_\+points}]{\setlength{\rightskip}{0pt plus 5cm}void Boundary\+::display\+\_\+points (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_boundary_a41a9097d2719db8755135ab1f6cc5dae}
+\hypertarget{class_boundary_ac6efa301f35e2a16f679812b5ae9f3c0}{}\index{Boundary@{Boundary}!display\+\_\+which\+\_\+curve@{display\+\_\+which\+\_\+curve}}
+\index{display\+\_\+which\+\_\+curve@{display\+\_\+which\+\_\+curve}!Boundary@{Boundary}}
+\subsubsection[{display\+\_\+which\+\_\+curve}]{\setlength{\rightskip}{0pt plus 5cm}void Boundary\+::display\+\_\+which\+\_\+curve (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_boundary_ac6efa301f35e2a16f679812b5ae9f3c0}
+\hypertarget{class_boundary_a5195aca0ac29b7c335e206a5c0052c12}{}\index{Boundary@{Boundary}!get\+\_\+compartment@{get\+\_\+compartment}}
+\index{get\+\_\+compartment@{get\+\_\+compartment}!Boundary@{Boundary}}
+\subsubsection[{get\+\_\+compartment}]{\setlength{\rightskip}{0pt plus 5cm}int Boundary\+::get\+\_\+compartment (
+\begin{DoxyParamCaption}
+\item[{int}]{i}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_boundary_a5195aca0ac29b7c335e206a5c0052c12}
+\hypertarget{class_boundary_a53c3c48ca4535bb1f4727a81ecf520a2}{}\index{Boundary@{Boundary}!get\+\_\+number\+\_\+of\+\_\+compartments@{get\+\_\+number\+\_\+of\+\_\+compartments}}
+\index{get\+\_\+number\+\_\+of\+\_\+compartments@{get\+\_\+number\+\_\+of\+\_\+compartments}!Boundary@{Boundary}}
+\subsubsection[{get\+\_\+number\+\_\+of\+\_\+compartments}]{\setlength{\rightskip}{0pt plus 5cm}int Boundary\+::get\+\_\+number\+\_\+of\+\_\+compartments (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_boundary_a53c3c48ca4535bb1f4727a81ecf520a2}
+\hypertarget{class_boundary_aa8c6fd642200c117cd40fb96f6ea7125}{}\index{Boundary@{Boundary}!get\+\_\+number\+\_\+of\+\_\+points@{get\+\_\+number\+\_\+of\+\_\+points}}
+\index{get\+\_\+number\+\_\+of\+\_\+points@{get\+\_\+number\+\_\+of\+\_\+points}!Boundary@{Boundary}}
+\subsubsection[{get\+\_\+number\+\_\+of\+\_\+points}]{\setlength{\rightskip}{0pt plus 5cm}int Boundary\+::get\+\_\+number\+\_\+of\+\_\+points (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_boundary_aa8c6fd642200c117cd40fb96f6ea7125}
+\hypertarget{class_boundary_a13e26d040c633adb3092e8fb0877f783}{}\index{Boundary@{Boundary}!make\+\_\+grid\+\_\+choice@{make\+\_\+grid\+\_\+choice}}
+\index{make\+\_\+grid\+\_\+choice@{make\+\_\+grid\+\_\+choice}!Boundary@{Boundary}}
+\subsubsection[{make\+\_\+grid\+\_\+choice}]{\setlength{\rightskip}{0pt plus 5cm}void Boundary\+::make\+\_\+grid\+\_\+choice (
+\begin{DoxyParamCaption}
+\item[{ofstream \&}]{outfile}
+\end{DoxyParamCaption}
+)}\label{class_boundary_a13e26d040c633adb3092e8fb0877f783}
+\hypertarget{class_boundary_abb65524d1d39c4e8d304acc7b9c71c47}{}\index{Boundary@{Boundary}!post\+\_\+grid\+\_\+opeartion@{post\+\_\+grid\+\_\+opeartion}}
+\index{post\+\_\+grid\+\_\+opeartion@{post\+\_\+grid\+\_\+opeartion}!Boundary@{Boundary}}
+\subsubsection[{post\+\_\+grid\+\_\+opeartion}]{\setlength{\rightskip}{0pt plus 5cm}void Boundary\+::post\+\_\+grid\+\_\+opeartion (
+\begin{DoxyParamCaption}
+\item[{int}]{index1, }
+\item[{int}]{index2, }
+\item[{int}]{choice}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_boundary_abb65524d1d39c4e8d304acc7b9c71c47}
+\hypertarget{class_boundary_abd07c6ec01953355779802ceefa6cf45}{}\index{Boundary@{Boundary}!set\+\_\+\+Boundary\+\_\+\+Points@{set\+\_\+\+Boundary\+\_\+\+Points}}
+\index{set\+\_\+\+Boundary\+\_\+\+Points@{set\+\_\+\+Boundary\+\_\+\+Points}!Boundary@{Boundary}}
+\subsubsection[{set\+\_\+\+Boundary\+\_\+\+Points}]{\setlength{\rightskip}{0pt plus 5cm}void Boundary\+::set\+\_\+\+Boundary\+\_\+\+Points (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_boundary_abd07c6ec01953355779802ceefa6cf45}
+\hypertarget{class_boundary_ace24f1af65c2bd016b0d07b8672c7cf7}{}\index{Boundary@{Boundary}!set\+\_\+number\+\_\+of\+\_\+compartments@{set\+\_\+number\+\_\+of\+\_\+compartments}}
+\index{set\+\_\+number\+\_\+of\+\_\+compartments@{set\+\_\+number\+\_\+of\+\_\+compartments}!Boundary@{Boundary}}
+\subsubsection[{set\+\_\+number\+\_\+of\+\_\+compartments}]{\setlength{\rightskip}{0pt plus 5cm}void Boundary\+::set\+\_\+number\+\_\+of\+\_\+compartments (
+\begin{DoxyParamCaption}
+\item[{int}]{i, }
+\item[{int}]{j}
+\end{DoxyParamCaption}
+)}\label{class_boundary_ace24f1af65c2bd016b0d07b8672c7cf7}
+\hypertarget{class_boundary_a46f816bb8cd7d30f6ee610911f09dd3c}{}\index{Boundary@{Boundary}!set\+\_\+number\+\_\+of\+\_\+initial\+\_\+compartments@{set\+\_\+number\+\_\+of\+\_\+initial\+\_\+compartments}}
+\index{set\+\_\+number\+\_\+of\+\_\+initial\+\_\+compartments@{set\+\_\+number\+\_\+of\+\_\+initial\+\_\+compartments}!Boundary@{Boundary}}
+\subsubsection[{set\+\_\+number\+\_\+of\+\_\+initial\+\_\+compartments}]{\setlength{\rightskip}{0pt plus 5cm}void Boundary\+::set\+\_\+number\+\_\+of\+\_\+initial\+\_\+compartments (
+\begin{DoxyParamCaption}
+\item[{int}]{N}
+\end{DoxyParamCaption}
+)}\label{class_boundary_a46f816bb8cd7d30f6ee610911f09dd3c}
+\hypertarget{class_boundary_a809810ee0436124876ee18d0026d52d4}{}\index{Boundary@{Boundary}!set\+\_\+size@{set\+\_\+size}}
+\index{set\+\_\+size@{set\+\_\+size}!Boundary@{Boundary}}
+\subsubsection[{set\+\_\+size}]{\setlength{\rightskip}{0pt plus 5cm}void Boundary\+::set\+\_\+size (
+\begin{DoxyParamCaption}
+\item[{int}]{N}
+\end{DoxyParamCaption}
+)}\label{class_boundary_a809810ee0436124876ee18d0026d52d4}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_boundary_a7e69dfe35213b6c0bef5a1479081f1a5}{}\index{Boundary@{Boundary}!number\+\_\+of\+\_\+compartments@{number\+\_\+of\+\_\+compartments}}
+\index{number\+\_\+of\+\_\+compartments@{number\+\_\+of\+\_\+compartments}!Boundary@{Boundary}}
+\subsubsection[{number\+\_\+of\+\_\+compartments}]{\setlength{\rightskip}{0pt plus 5cm}int Boundary\+::number\+\_\+of\+\_\+compartments\hspace{0.3cm}{\ttfamily [private]}}\label{class_boundary_a7e69dfe35213b6c0bef5a1479081f1a5}
+\hypertarget{class_boundary_a216a0f808019a2383c3c4da1014b4b9f}{}\index{Boundary@{Boundary}!number\+\_\+of\+\_\+points@{number\+\_\+of\+\_\+points}}
+\index{number\+\_\+of\+\_\+points@{number\+\_\+of\+\_\+points}!Boundary@{Boundary}}
+\subsubsection[{number\+\_\+of\+\_\+points}]{\setlength{\rightskip}{0pt plus 5cm}int Boundary\+::number\+\_\+of\+\_\+points\hspace{0.3cm}{\ttfamily [private]}}\label{class_boundary_a216a0f808019a2383c3c4da1014b4b9f}
+\hypertarget{class_boundary_afe159eca3abe85fd1e12c34842552a84}{}\index{Boundary@{Boundary}!points@{points}}
+\index{points@{points}!Boundary@{Boundary}}
+\subsubsection[{points}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Domain}$\ast$ Boundary\+::points}\label{class_boundary_afe159eca3abe85fd1e12c34842552a84}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{_boundary_8h}{Boundary.\+h}\item 
+src/\hyperlink{_boundary_8cpp}{Boundary.\+cpp}\end{DoxyCompactItemize}

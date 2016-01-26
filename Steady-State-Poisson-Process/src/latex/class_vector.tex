@@ -1,0 +1,446 @@
+\hypertarget{class_vector}{}\section{Vector$<$ T $>$ Class Template Reference}
+\label{class_vector}\index{Vector$<$ T $>$@{Vector$<$ T $>$}}
+
+
+{\ttfamily \#include $<$Vector.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_vector_a39d6069675db4ecfc1ab81d440da759a}{Vector} ()
+\begin{DoxyCompactList}\small\item\em Default Constructor. \end{DoxyCompactList}\item 
+\hyperlink{class_vector_a7233eaf600bca59dbd1a195ccb465cf5}{Vector} (int m)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\hyperlink{class_vector_aadd88501ee4d48b6da9fa12530373b63}{$\sim$\+Vector} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \hyperlink{class_vector_af8fbb7be7e884bbd38fd619f791a493b}{display} ()
+\begin{DoxyCompactList}\small\item\em Prints the value of vector. \end{DoxyCompactList}\item 
+void \hyperlink{class_vector_ac82088c9d33b959876efd77dbc46e2fd}{initialize} ()
+\begin{DoxyCompactList}\small\item\em Initializes the vector with 0. \end{DoxyCompactList}\item 
+void \hyperlink{class_vector_a0506141fb83169539d9b50c035a4c375}{read\+\_\+values} ()
+\begin{DoxyCompactList}\small\item\em Reads the enteries from the user and stores in the vector. \end{DoxyCompactList}\item 
+void \hyperlink{class_vector_ad3e66cc314446ce3418ef8792fdc3b5d}{resize} (int m)
+\begin{DoxyCompactList}\small\item\em Resizes the vector. \end{DoxyCompactList}\item 
+void \hyperlink{class_vector_a7cc3be793f521e901f153f756d8f03a3}{set\+\_\+size} (int m)
+\begin{DoxyCompactList}\small\item\em Sets the vector size. \end{DoxyCompactList}\item 
+int \hyperlink{class_vector_a7e3c8454662725ab7a7d3ad64b8b0eb1}{get\+\_\+size} ()
+\item 
+\hyperlink{class_vector}{Vector} \hyperlink{class_vector_ad3b8980f88923b6aac44bd65a093dc69}{operator+} (\hyperlink{class_vector}{Vector} \&)
+\begin{DoxyCompactList}\small\item\em operator overloaded \end{DoxyCompactList}\item 
+\hyperlink{class_vector}{Vector} \hyperlink{class_vector_af43adb2f0f503c4a017e61b0647eeb89}{operator-\/} (\hyperlink{class_vector}{Vector})
+\begin{DoxyCompactList}\small\item\em operator overloaded \end{DoxyCompactList}\item 
+T \hyperlink{class_vector_a03931ccfca226e46710a8c395b62b292}{operator$\ast$} (\hyperlink{class_vector}{Vector} \&)
+\begin{DoxyCompactList}\small\item\em operator overloaded \end{DoxyCompactList}\item 
+\hyperlink{class_vector}{Vector} \hyperlink{class_vector_a6185df9d22ec80546e72fb52d17a4893}{operator$\ast$} (float)
+\begin{DoxyCompactList}\small\item\em operator overloaded \end{DoxyCompactList}\item 
+void \hyperlink{class_vector_a25f4c7dc716b4971d37a9354df16f4fb}{copy\+\_\+values} (\hyperlink{class_vector}{Vector} \&)
+\begin{DoxyCompactList}\small\item\em Creates the copy of of the vector. \end{DoxyCompactList}\item 
+T \& \hyperlink{class_vector_ada36811f9a98443820d1ebea0e36a429}{operator\mbox{[}$\,$\mbox{]}} (int i)
+\begin{DoxyCompactList}\small\item\em \mbox{[}\mbox{]} opearator overloaded \end{DoxyCompactList}\item 
+void \hyperlink{class_vector_a466ca7da1c0dcc2aaa61ceab5b725930}{del} ()
+\begin{DoxyCompactList}\small\item\em Deletes the vector. \end{DoxyCompactList}\item 
+void \hyperlink{class_vector_a93af0ecdf122aa1303550d1c7f0396ae}{add} (\hyperlink{class_vector}{Vector} \&, \hyperlink{class_vector}{Vector} \&, T)
+\begin{DoxyCompactList}\small\item\em Perform the addition operation of the form A = vector1 + alpha$\ast$ Vector2. \end{DoxyCompactList}\item 
+void \hyperlink{class_vector_a5149e97157d953073c6e5d4fa93f986d}{sub} (\hyperlink{class_vector}{Vector} \&, \hyperlink{class_vector}{Vector} \&)
+\begin{DoxyCompactList}\small\item\em Perform the substraction operation of the form A = vector1 -\/ Vector2. \end{DoxyCompactList}\item 
+void \hyperlink{class_vector_a383f11d918ea6d7b98f1f1349438eaef}{add} (\hyperlink{class_vector}{Vector} \&, \hyperlink{class_vector}{Vector} \&)
+\begin{DoxyCompactList}\small\item\em Perform the addition operation of the form A = vector1 -\/ Vector2. \end{DoxyCompactList}\item 
+void \hyperlink{class_vector_a18bcec2aa0b570722d5c59e6ba24d7db}{set\+\_\+value} (int, T)
+\begin{DoxyCompactList}\small\item\em set the value at a a particular location \end{DoxyCompactList}\item 
+void \hyperlink{class_vector_a000d3d2daf69f5c3feb2e8ce4de4c4f0}{multiply\+\_\+dot} (\hyperlink{class_vector}{Vector} \&, \hyperlink{class_vector}{Vector} \&)
+\begin{DoxyCompactList}\small\item\em Perform the pairwise multiplication operation of the form A = vector1.$\ast$ Vector2. \end{DoxyCompactList}\item 
+void \hyperlink{class_vector_ade18a68062f38bf5f83a041e96fe9e77}{ones} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_vector_a5cdce317c4c74592fcb64fd3dde6ce49}{get\+Data} ()
+\begin{DoxyCompactList}\small\item\em Add the enteries into the vector. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_vector_aac9657cb0934d133a2d9868f0661ac01}{elements}
+\begin{DoxyCompactList}\small\item\em number of elements in the vector \end{DoxyCompactList}\item 
+T $\ast$ \hyperlink{class_vector_ac1512c9d8f28d4253e52967d64b803d9}{A}
+\begin{DoxyCompactList}\small\item\em 1\+D array to store data \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_vector_a39d6069675db4ecfc1ab81d440da759a}{}\index{Vector@{Vector}!Vector@{Vector}}
+\index{Vector@{Vector}!Vector@{Vector}}
+\subsubsection[{Vector}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ {\bf Vector}$<$ T $>$\+::{\bf Vector} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_vector_a39d6069675db4ecfc1ab81d440da759a}
+
+
+Default Constructor. 
+
+\hypertarget{class_vector_a7233eaf600bca59dbd1a195ccb465cf5}{}\index{Vector@{Vector}!Vector@{Vector}}
+\index{Vector@{Vector}!Vector@{Vector}}
+\subsubsection[{Vector}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ {\bf Vector}$<$ T $>$\+::{\bf Vector} (
+\begin{DoxyParamCaption}
+\item[{int}]{m}
+\end{DoxyParamCaption}
+)}\label{class_vector_a7233eaf600bca59dbd1a195ccb465cf5}
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & creates a vector of size m \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_vector_aadd88501ee4d48b6da9fa12530373b63}{}\index{Vector@{Vector}!````~Vector@{$\sim$\+Vector}}
+\index{````~Vector@{$\sim$\+Vector}!Vector@{Vector}}
+\subsubsection[{$\sim$\+Vector}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ {\bf Vector}$<$ T $>$\+::$\sim${\bf Vector}$<$ T $>$ (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_vector_aadd88501ee4d48b6da9fa12530373b63}
+
+
+Destructor. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_vector_a93af0ecdf122aa1303550d1c7f0396ae}{}\index{Vector@{Vector}!add@{add}}
+\index{add@{add}!Vector@{Vector}}
+\subsubsection[{add}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ void {\bf Vector}$<$ T $>$\+::add (
+\begin{DoxyParamCaption}
+\item[{{\bf Vector}$<$ T $>$ \&}]{vector1, }
+\item[{{\bf Vector}$<$ T $>$ \&}]{vector2, }
+\item[{T}]{alpha}
+\end{DoxyParamCaption}
+)}\label{class_vector_a93af0ecdf122aa1303550d1c7f0396ae}
+
+
+Perform the addition operation of the form A = vector1 + alpha$\ast$ Vector2. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vector1} & vector\\
+\hline
+{\em vector2} & vector\\
+\hline
+{\em alpha} & constant \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_vector_a383f11d918ea6d7b98f1f1349438eaef}{}\index{Vector@{Vector}!add@{add}}
+\index{add@{add}!Vector@{Vector}}
+\subsubsection[{add}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ void {\bf Vector}$<$ T $>$\+::add (
+\begin{DoxyParamCaption}
+\item[{{\bf Vector}$<$ T $>$ \&}]{vector1, }
+\item[{{\bf Vector}$<$ T $>$ \&}]{vector2}
+\end{DoxyParamCaption}
+)}\label{class_vector_a383f11d918ea6d7b98f1f1349438eaef}
+
+
+Perform the addition operation of the form A = vector1 -\/ Vector2. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vector1} & vector\\
+\hline
+{\em vector2} & vector \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_vector_a25f4c7dc716b4971d37a9354df16f4fb}{}\index{Vector@{Vector}!copy\+\_\+values@{copy\+\_\+values}}
+\index{copy\+\_\+values@{copy\+\_\+values}!Vector@{Vector}}
+\subsubsection[{copy\+\_\+values}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ void {\bf Vector}$<$ T $>$\+::copy\+\_\+values (
+\begin{DoxyParamCaption}
+\item[{{\bf Vector}$<$ T $>$ \&}]{vector2}
+\end{DoxyParamCaption}
+)}\label{class_vector_a25f4c7dc716b4971d37a9354df16f4fb}
+
+
+Creates the copy of of the vector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vector2} & \hyperlink{class_vector}{Vector} which is to be copied \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_vector_a466ca7da1c0dcc2aaa61ceab5b725930}{}\index{Vector@{Vector}!del@{del}}
+\index{del@{del}!Vector@{Vector}}
+\subsubsection[{del}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ void {\bf Vector}$<$ T $>$\+::del (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_vector_a466ca7da1c0dcc2aaa61ceab5b725930}
+
+
+Deletes the vector. 
+
+\hypertarget{class_vector_af8fbb7be7e884bbd38fd619f791a493b}{}\index{Vector@{Vector}!display@{display}}
+\index{display@{display}!Vector@{Vector}}
+\subsubsection[{display}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ void {\bf Vector}$<$ T $>$\+::display (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_vector_af8fbb7be7e884bbd38fd619f791a493b}
+
+
+Prints the value of vector. 
+
+\hypertarget{class_vector_a7e3c8454662725ab7a7d3ad64b8b0eb1}{}\index{Vector@{Vector}!get\+\_\+size@{get\+\_\+size}}
+\index{get\+\_\+size@{get\+\_\+size}!Vector@{Vector}}
+\subsubsection[{get\+\_\+size}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ int {\bf Vector}$<$ T $>$\+::get\+\_\+size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_vector_a7e3c8454662725ab7a7d3ad64b8b0eb1}
+\begin{DoxyReturn}{Returns}
+the size of the vector 
+\end{DoxyReturn}
+\hypertarget{class_vector_a5cdce317c4c74592fcb64fd3dde6ce49}{}\index{Vector@{Vector}!get\+Data@{get\+Data}}
+\index{get\+Data@{get\+Data}!Vector@{Vector}}
+\subsubsection[{get\+Data}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ void {\bf Vector}$<$ T $>$\+::get\+Data (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_vector_a5cdce317c4c74592fcb64fd3dde6ce49}
+
+
+Add the enteries into the vector. 
+
+\hypertarget{class_vector_ac82088c9d33b959876efd77dbc46e2fd}{}\index{Vector@{Vector}!initialize@{initialize}}
+\index{initialize@{initialize}!Vector@{Vector}}
+\subsubsection[{initialize}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ void {\bf Vector}$<$ T $>$\+::initialize (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_vector_ac82088c9d33b959876efd77dbc46e2fd}
+
+
+Initializes the vector with 0. 
+
+\hypertarget{class_vector_a000d3d2daf69f5c3feb2e8ce4de4c4f0}{}\index{Vector@{Vector}!multiply\+\_\+dot@{multiply\+\_\+dot}}
+\index{multiply\+\_\+dot@{multiply\+\_\+dot}!Vector@{Vector}}
+\subsubsection[{multiply\+\_\+dot}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ void {\bf Vector}$<$ T $>$\+::multiply\+\_\+dot (
+\begin{DoxyParamCaption}
+\item[{{\bf Vector}$<$ T $>$ \&}]{vector1, }
+\item[{{\bf Vector}$<$ T $>$ \&}]{vector2}
+\end{DoxyParamCaption}
+)}\label{class_vector_a000d3d2daf69f5c3feb2e8ce4de4c4f0}
+
+
+Perform the pairwise multiplication operation of the form A = vector1.$\ast$ Vector2. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vector1} & vector\\
+\hline
+{\em vector2} & vector \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_vector_ade18a68062f38bf5f83a041e96fe9e77}{}\index{Vector@{Vector}!ones@{ones}}
+\index{ones@{ones}!Vector@{Vector}}
+\subsubsection[{ones}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ void {\bf Vector}$<$ T $>$\+::ones (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_vector_ade18a68062f38bf5f83a041e96fe9e77}
+\hypertarget{class_vector_a03931ccfca226e46710a8c395b62b292}{}\index{Vector@{Vector}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!Vector@{Vector}}
+\subsubsection[{operator$\ast$}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ T {\bf Vector}$<$ T $>$\+::operator$\ast$ (
+\begin{DoxyParamCaption}
+\item[{{\bf Vector}$<$ T $>$ \&}]{vector2}
+\end{DoxyParamCaption}
+)}\label{class_vector_a03931ccfca226e46710a8c395b62b292}
+
+
+operator overloaded 
+
+Computes the inner product of two vectors $<$ Vector1 Vector2$>$
+
+
+\begin{DoxyParams}{Parameters}
+{\em vector2} & vector to be multiplied with\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the value of the inner product. 
+\end{DoxyReturn}
+\hypertarget{class_vector_a6185df9d22ec80546e72fb52d17a4893}{}\index{Vector@{Vector}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!Vector@{Vector}}
+\subsubsection[{operator$\ast$}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ {\bf Vector}$<$ T $>$ {\bf Vector}$<$ T $>$\+::operator$\ast$ (
+\begin{DoxyParamCaption}
+\item[{float}]{alpha}
+\end{DoxyParamCaption}
+)}\label{class_vector_a6185df9d22ec80546e72fb52d17a4893}
+
+
+operator overloaded 
+
+Computes the product of an integer with the vector
+
+
+\begin{DoxyParams}{Parameters}
+{\em alpha} & the float value to be multiplied with\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the new vector formed. 
+\end{DoxyReturn}
+\hypertarget{class_vector_ad3b8980f88923b6aac44bd65a093dc69}{}\index{Vector@{Vector}!operator+@{operator+}}
+\index{operator+@{operator+}!Vector@{Vector}}
+\subsubsection[{operator+}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ {\bf Vector}$<$ T $>$ {\bf Vector}$<$ T $>$\+::operator+ (
+\begin{DoxyParamCaption}
+\item[{{\bf Vector}$<$ T $>$ \&}]{vector2}
+\end{DoxyParamCaption}
+)}\label{class_vector_ad3b8980f88923b6aac44bd65a093dc69}
+
+
+operator overloaded 
+
+Computes the addition of two vectors A = vector1 + vector 2
+
+
+\begin{DoxyParams}{Parameters}
+{\em vector2} & vector to be added with\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the vector A. 
+\end{DoxyReturn}
+\hypertarget{class_vector_af43adb2f0f503c4a017e61b0647eeb89}{}\index{Vector@{Vector}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!Vector@{Vector}}
+\subsubsection[{operator-\/}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ {\bf Vector}$<$ T $>$ {\bf Vector}$<$ T $>$\+::operator-\/ (
+\begin{DoxyParamCaption}
+\item[{{\bf Vector}$<$ T $>$}]{vector2}
+\end{DoxyParamCaption}
+)}\label{class_vector_af43adb2f0f503c4a017e61b0647eeb89}
+
+
+operator overloaded 
+
+Computes the subtraction of two vectors A = vector1 -\/ vector 2
+
+
+\begin{DoxyParams}{Parameters}
+{\em vector2} & vector to be subtracted with\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the vector A. 
+\end{DoxyReturn}
+\hypertarget{class_vector_ada36811f9a98443820d1ebea0e36a429}{}\index{Vector@{Vector}!operator\mbox{[}$\,$\mbox{]}@{operator[]}}
+\index{operator\mbox{[}$\,$\mbox{]}@{operator[]}!Vector@{Vector}}
+\subsubsection[{operator[]}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ T \& {\bf Vector}$<$ T $>$\+::operator\mbox{[}$\,$\mbox{]} (
+\begin{DoxyParamCaption}
+\item[{int}]{i}
+\end{DoxyParamCaption}
+)}\label{class_vector_ada36811f9a98443820d1ebea0e36a429}
+
+
+\mbox{[}\mbox{]} opearator overloaded 
+
+return the value of A\mbox{[}i\mbox{]} \hypertarget{class_vector_a0506141fb83169539d9b50c035a4c375}{}\index{Vector@{Vector}!read\+\_\+values@{read\+\_\+values}}
+\index{read\+\_\+values@{read\+\_\+values}!Vector@{Vector}}
+\subsubsection[{read\+\_\+values}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ void {\bf Vector}$<$ T $>$\+::read\+\_\+values (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_vector_a0506141fb83169539d9b50c035a4c375}
+
+
+Reads the enteries from the user and stores in the vector. 
+
+\hypertarget{class_vector_ad3e66cc314446ce3418ef8792fdc3b5d}{}\index{Vector@{Vector}!resize@{resize}}
+\index{resize@{resize}!Vector@{Vector}}
+\subsubsection[{resize}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ void {\bf Vector}$<$ T $>$\+::resize (
+\begin{DoxyParamCaption}
+\item[{int}]{m}
+\end{DoxyParamCaption}
+)}\label{class_vector_ad3e66cc314446ce3418ef8792fdc3b5d}
+
+
+Resizes the vector. 
+
+Does both the operation of increasing and decreasing the vector size
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & the size of desired vector \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_vector_a7cc3be793f521e901f153f756d8f03a3}{}\index{Vector@{Vector}!set\+\_\+size@{set\+\_\+size}}
+\index{set\+\_\+size@{set\+\_\+size}!Vector@{Vector}}
+\subsubsection[{set\+\_\+size}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ void {\bf Vector}$<$ T $>$\+::set\+\_\+size (
+\begin{DoxyParamCaption}
+\item[{int}]{m}
+\end{DoxyParamCaption}
+)}\label{class_vector_a7cc3be793f521e901f153f756d8f03a3}
+
+
+Sets the vector size. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & size of the vector \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_vector_a18bcec2aa0b570722d5c59e6ba24d7db}{}\index{Vector@{Vector}!set\+\_\+value@{set\+\_\+value}}
+\index{set\+\_\+value@{set\+\_\+value}!Vector@{Vector}}
+\subsubsection[{set\+\_\+value}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ void {\bf Vector}$<$ T $>$\+::set\+\_\+value (
+\begin{DoxyParamCaption}
+\item[{int}]{i, }
+\item[{T}]{value}
+\end{DoxyParamCaption}
+)}\label{class_vector_a18bcec2aa0b570722d5c59e6ba24d7db}
+
+
+set the value at a a particular location 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & the location where the value is to be inserted\\
+\hline
+{\em value} & value which is to be stored at that location \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_vector_a5149e97157d953073c6e5d4fa93f986d}{}\index{Vector@{Vector}!sub@{sub}}
+\index{sub@{sub}!Vector@{Vector}}
+\subsubsection[{sub}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ void {\bf Vector}$<$ T $>$\+::sub (
+\begin{DoxyParamCaption}
+\item[{{\bf Vector}$<$ T $>$ \&}]{vector1, }
+\item[{{\bf Vector}$<$ T $>$ \&}]{vector2}
+\end{DoxyParamCaption}
+)}\label{class_vector_a5149e97157d953073c6e5d4fa93f986d}
+
+
+Perform the substraction operation of the form A = vector1 -\/ Vector2. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vector1} & vector\\
+\hline
+{\em vector2} & vector \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_vector_ac1512c9d8f28d4253e52967d64b803d9}{}\index{Vector@{Vector}!A@{A}}
+\index{A@{A}!Vector@{Vector}}
+\subsubsection[{A}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ T$\ast$ {\bf Vector}$<$ T $>$\+::A\hspace{0.3cm}{\ttfamily [private]}}\label{class_vector_ac1512c9d8f28d4253e52967d64b803d9}
+
+
+1\+D array to store data 
+
+\hypertarget{class_vector_aac9657cb0934d133a2d9868f0661ac01}{}\index{Vector@{Vector}!elements@{elements}}
+\index{elements@{elements}!Vector@{Vector}}
+\subsubsection[{elements}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ int {\bf Vector}$<$ T $>$\+::elements\hspace{0.3cm}{\ttfamily [private]}}\label{class_vector_aac9657cb0934d133a2d9868f0661ac01}
+
+
+number of elements in the vector 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_vector_8h}{Vector.\+h}\end{DoxyCompactItemize}

@@ -1,0 +1,429 @@
+\hypertarget{class_sparse_matrix}{}\section{Sparse\+Matrix Class Reference}
+\label{class_sparse_matrix}\index{Sparse\+Matrix@{Sparse\+Matrix}}
+
+
+This class stores the value of matrix in sparse form.  
+
+
+
+
+{\ttfamily \#include $<$Sparse\+Matrix.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_sparse_matrix_a162de2c1ddf9ab27aa45f96e8a3b03ae}{initialize} (int N)
+\begin{DoxyCompactList}\small\item\em Allocates the size of the sparse matrix. \end{DoxyCompactList}\item 
+void \hyperlink{class_sparse_matrix_a5d4c3ed7f638b2376d12e62489823880}{get\+\_\+data} ()
+\begin{DoxyCompactList}\small\item\em Reads the data from the keyboard and stores in the sparse matrix. \end{DoxyCompactList}\item 
+void \hyperlink{class_sparse_matrix_a5030663c5514c3cd1fca0b52d075abe8}{display} ()
+\begin{DoxyCompactList}\small\item\em Display the sparse matrix. \end{DoxyCompactList}\item 
+void \hyperlink{class_sparse_matrix_a804f326a1d6acae360bb61dd65a6e1b5}{display\+\_\+\+I} ()
+\begin{DoxyCompactList}\small\item\em Display I vector. \end{DoxyCompactList}\item 
+void \hyperlink{class_sparse_matrix_a793b6d80478f11bd8751d4dd461a39d7}{display\+\_\+\+J} ()
+\begin{DoxyCompactList}\small\item\em Display J vector. \end{DoxyCompactList}\item 
+double \hyperlink{class_sparse_matrix_a73c1386e4a8c0bcd5794388ab466b653}{get\+Value} (int m, int n)
+\item 
+int \hyperlink{class_sparse_matrix_ae0da8b29c003e7c86922fbbe5ac4cf37}{get\+\_\+row\+\_\+size} ()
+\item 
+int \hyperlink{class_sparse_matrix_a17952677da3e9d5ba5251d9c88b525d2}{get\+\_\+non\+\_\+zero\+\_\+enteries} ()
+\item 
+int \hyperlink{class_sparse_matrix_a853aa94295ebeec1b72aaee542b1e6bf}{get\+\_\+size} ()
+\item 
+void \hyperlink{class_sparse_matrix_a1317a1d66aa80814ba177429ce2873e1}{update\+\_\+matrix} (double m, int R\+O\+W, int C\+O\+L)
+\begin{DoxyCompactList}\small\item\em Update the matrix whenever a non zero entry comes. \end{DoxyCompactList}\item 
+void \hyperlink{class_sparse_matrix_afa19deb4d52146d5fb938d43d4eb896d}{set\+\_\+size\+\_\+\+I} (int N)
+\item 
+void \hyperlink{class_sparse_matrix_acd4fd555b1a73dd1e5448b41b9026d54}{set\+\_\+size\+\_\+\+J} (int N)
+\item 
+void \hyperlink{class_sparse_matrix_a486aee279efaf3f2bdf7d9529d99cf32}{resize\+\_\+matrix} ()
+\begin{DoxyCompactList}\small\item\em resize the matrix when number of non-\/zero element exceeds the size of vector \end{DoxyCompactList}\item 
+\hyperlink{class_vector}{Vector}$<$ double $>$ \hyperlink{class_sparse_matrix_aef1b60f3004d7b4d686d8f267ab02de9}{operator$\ast$} (\hyperlink{class_vector}{Vector}$<$ double $>$ vec)
+\begin{DoxyCompactList}\small\item\em Operator overloaded. \end{DoxyCompactList}\item 
+double \hyperlink{class_sparse_matrix_a6ca05f8e391c80f7e2cb33a9e0801eeb}{get\+\_\+non\+\_\+zero\+\_\+\+Elements} (int)
+\item 
+int \hyperlink{class_sparse_matrix_a39da3940234cffada544a89556812ba3}{get\+\_\+\+I} (int)
+\item 
+int \hyperlink{class_sparse_matrix_a0bef0481e55d37959087534701b971d2}{get\+\_\+\+J} (int)
+\item 
+void \hyperlink{class_sparse_matrix_ad67080fca9273a1660f55e6e0b8b6a2d}{multiply} (\hyperlink{class_vector}{Vector}$<$ double $>$ \&, \hyperlink{class_vector}{Vector}$<$ double $>$ \&)
+\begin{DoxyCompactList}\small\item\em Multiplication of a matrix with a vector. \end{DoxyCompactList}\item 
+void \hyperlink{class_sparse_matrix_a2c4defbcb8be6850ffffceb7c31f86ba}{copy} (\hyperlink{class_sparse_matrix}{Sparse\+Matrix} \&)
+\begin{DoxyCompactList}\small\item\em This copies the sparse matrix into anoother sparse matrix. \end{DoxyCompactList}\item 
+void \hyperlink{class_sparse_matrix_afb9d3a09f4b71ff1fcca81129b64de5f}{extractdiagonal} (\hyperlink{class_sparse_matrix}{Sparse\+Matrix} \&)
+\begin{DoxyCompactList}\small\item\em Extract diagonal for the preparation of Jacobi preconditioner. \end{DoxyCompactList}\item 
+void \hyperlink{class_sparse_matrix_aa772cb0ed69d4b4ceca72987f5cd4043}{update\+\_\+matrix\+\_\+\+I\+L\+U} (double, int, int)
+\begin{DoxyCompactList}\small\item\em Change the value of the matrix at (R\+O\+W,C\+O\+L) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_vector}{Vector}$<$ double $>$ \hyperlink{class_sparse_matrix_a3ed1cb2b0a0dd4b6c7220c49d6535efb}{Elements}
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_vector}{Vector} containing the elements of the matrix A. \end{DoxyCompactList}\item 
+\hyperlink{class_vector}{Vector}$<$ int $>$ \hyperlink{class_sparse_matrix_ab44942445ac457aaa6e984615fcf7b49}{I}
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_vector}{Vector} containing the row information about the matrix A. \end{DoxyCompactList}\item 
+\hyperlink{class_vector}{Vector}$<$ int $>$ \hyperlink{class_sparse_matrix_a9febac8d56047bfcb48c6849f9b8ebcd}{J}
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_vector}{Vector} containing the column information about the matrix A. \end{DoxyCompactList}\item 
+int \hyperlink{class_sparse_matrix_a5f84c3e572c129bbef55d4e9343abd1b}{number\+\_\+of\+\_\+rows}
+\begin{DoxyCompactList}\small\item\em Number of rows in the sparse matrix. \end{DoxyCompactList}\item 
+int \hyperlink{class_sparse_matrix_aad150f4ad676a2919a478457e7c050d3}{number\+\_\+of\+\_\+non\+\_\+zero}
+\begin{DoxyCompactList}\small\item\em Number of non-\/zero enteries in sparse matrix. \end{DoxyCompactList}\item 
+int \hyperlink{class_sparse_matrix_ab741b7b30296448a3f004d8a5c24fc33}{size\+\_\+of\+\_\+array}
+\begin{DoxyCompactList}\small\item\em Size of the sparse matrix. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class stores the value of matrix in sparse form. 
+
+\begin{DoxyAuthor}{Author}
+Kumar Saurabh (M\+A14\+M004) 
+\end{DoxyAuthor}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_sparse_matrix_a2c4defbcb8be6850ffffceb7c31f86ba}{}\index{Sparse\+Matrix@{Sparse\+Matrix}!copy@{copy}}
+\index{copy@{copy}!Sparse\+Matrix@{Sparse\+Matrix}}
+\subsubsection[{copy}]{\setlength{\rightskip}{0pt plus 5cm}void Sparse\+Matrix\+::copy (
+\begin{DoxyParamCaption}
+\item[{{\bf Sparse\+Matrix} \&}]{spm}
+\end{DoxyParamCaption}
+)}\label{class_sparse_matrix_a2c4defbcb8be6850ffffceb7c31f86ba}
+
+
+This copies the sparse matrix into anoother sparse matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em spm} & the sparse matrix which is to be copied. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_sparse_matrix_a5030663c5514c3cd1fca0b52d075abe8}{}\index{Sparse\+Matrix@{Sparse\+Matrix}!display@{display}}
+\index{display@{display}!Sparse\+Matrix@{Sparse\+Matrix}}
+\subsubsection[{display}]{\setlength{\rightskip}{0pt plus 5cm}void Sparse\+Matrix\+::display (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_sparse_matrix_a5030663c5514c3cd1fca0b52d075abe8}
+
+
+Display the sparse matrix. 
+
+\hypertarget{class_sparse_matrix_a804f326a1d6acae360bb61dd65a6e1b5}{}\index{Sparse\+Matrix@{Sparse\+Matrix}!display\+\_\+\+I@{display\+\_\+\+I}}
+\index{display\+\_\+\+I@{display\+\_\+\+I}!Sparse\+Matrix@{Sparse\+Matrix}}
+\subsubsection[{display\+\_\+\+I}]{\setlength{\rightskip}{0pt plus 5cm}void Sparse\+Matrix\+::display\+\_\+\+I (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_sparse_matrix_a804f326a1d6acae360bb61dd65a6e1b5}
+
+
+Display I vector. 
+
+\hypertarget{class_sparse_matrix_a793b6d80478f11bd8751d4dd461a39d7}{}\index{Sparse\+Matrix@{Sparse\+Matrix}!display\+\_\+\+J@{display\+\_\+\+J}}
+\index{display\+\_\+\+J@{display\+\_\+\+J}!Sparse\+Matrix@{Sparse\+Matrix}}
+\subsubsection[{display\+\_\+\+J}]{\setlength{\rightskip}{0pt plus 5cm}void Sparse\+Matrix\+::display\+\_\+\+J (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_sparse_matrix_a793b6d80478f11bd8751d4dd461a39d7}
+
+
+Display J vector. 
+
+\hypertarget{class_sparse_matrix_afb9d3a09f4b71ff1fcca81129b64de5f}{}\index{Sparse\+Matrix@{Sparse\+Matrix}!extractdiagonal@{extractdiagonal}}
+\index{extractdiagonal@{extractdiagonal}!Sparse\+Matrix@{Sparse\+Matrix}}
+\subsubsection[{extractdiagonal}]{\setlength{\rightskip}{0pt plus 5cm}void Sparse\+Matrix\+::extractdiagonal (
+\begin{DoxyParamCaption}
+\item[{{\bf Sparse\+Matrix} \&}]{spm}
+\end{DoxyParamCaption}
+)}\label{class_sparse_matrix_afb9d3a09f4b71ff1fcca81129b64de5f}
+
+
+Extract diagonal for the preparation of Jacobi preconditioner. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em spm} & Matrix A in Sparse form \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_sparse_matrix_a5d4c3ed7f638b2376d12e62489823880}{}\index{Sparse\+Matrix@{Sparse\+Matrix}!get\+\_\+data@{get\+\_\+data}}
+\index{get\+\_\+data@{get\+\_\+data}!Sparse\+Matrix@{Sparse\+Matrix}}
+\subsubsection[{get\+\_\+data}]{\setlength{\rightskip}{0pt plus 5cm}void Sparse\+Matrix\+::get\+\_\+data (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_sparse_matrix_a5d4c3ed7f638b2376d12e62489823880}
+
+
+Reads the data from the keyboard and stores in the sparse matrix. 
+
+\hypertarget{class_sparse_matrix_a39da3940234cffada544a89556812ba3}{}\index{Sparse\+Matrix@{Sparse\+Matrix}!get\+\_\+\+I@{get\+\_\+\+I}}
+\index{get\+\_\+\+I@{get\+\_\+\+I}!Sparse\+Matrix@{Sparse\+Matrix}}
+\subsubsection[{get\+\_\+\+I}]{\setlength{\rightskip}{0pt plus 5cm}int Sparse\+Matrix\+::get\+\_\+\+I (
+\begin{DoxyParamCaption}
+\item[{int}]{i}
+\end{DoxyParamCaption}
+)}\label{class_sparse_matrix_a39da3940234cffada544a89556812ba3}
+
+\begin{DoxyParams}{Parameters}
+{\em i} & Row number\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of non zero enteries before a particular row number 
+\end{DoxyReturn}
+\hypertarget{class_sparse_matrix_a0bef0481e55d37959087534701b971d2}{}\index{Sparse\+Matrix@{Sparse\+Matrix}!get\+\_\+\+J@{get\+\_\+\+J}}
+\index{get\+\_\+\+J@{get\+\_\+\+J}!Sparse\+Matrix@{Sparse\+Matrix}}
+\subsubsection[{get\+\_\+\+J}]{\setlength{\rightskip}{0pt plus 5cm}int Sparse\+Matrix\+::get\+\_\+\+J (
+\begin{DoxyParamCaption}
+\item[{int}]{i}
+\end{DoxyParamCaption}
+)}\label{class_sparse_matrix_a0bef0481e55d37959087534701b971d2}
+
+\begin{DoxyParams}{Parameters}
+{\em i} & the index of the location \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the column number at location i 
+\end{DoxyReturn}
+\hypertarget{class_sparse_matrix_a6ca05f8e391c80f7e2cb33a9e0801eeb}{}\index{Sparse\+Matrix@{Sparse\+Matrix}!get\+\_\+non\+\_\+zero\+\_\+\+Elements@{get\+\_\+non\+\_\+zero\+\_\+\+Elements}}
+\index{get\+\_\+non\+\_\+zero\+\_\+\+Elements@{get\+\_\+non\+\_\+zero\+\_\+\+Elements}!Sparse\+Matrix@{Sparse\+Matrix}}
+\subsubsection[{get\+\_\+non\+\_\+zero\+\_\+\+Elements}]{\setlength{\rightskip}{0pt plus 5cm}double Sparse\+Matrix\+::get\+\_\+non\+\_\+zero\+\_\+\+Elements (
+\begin{DoxyParamCaption}
+\item[{int}]{i}
+\end{DoxyParamCaption}
+)}\label{class_sparse_matrix_a6ca05f8e391c80f7e2cb33a9e0801eeb}
+
+\begin{DoxyParams}{Parameters}
+{\em i} & the index of the location \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the non-\/zero entry at location i 
+\end{DoxyReturn}
+\hypertarget{class_sparse_matrix_a17952677da3e9d5ba5251d9c88b525d2}{}\index{Sparse\+Matrix@{Sparse\+Matrix}!get\+\_\+non\+\_\+zero\+\_\+enteries@{get\+\_\+non\+\_\+zero\+\_\+enteries}}
+\index{get\+\_\+non\+\_\+zero\+\_\+enteries@{get\+\_\+non\+\_\+zero\+\_\+enteries}!Sparse\+Matrix@{Sparse\+Matrix}}
+\subsubsection[{get\+\_\+non\+\_\+zero\+\_\+enteries}]{\setlength{\rightskip}{0pt plus 5cm}int Sparse\+Matrix\+::get\+\_\+non\+\_\+zero\+\_\+enteries (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_sparse_matrix_a17952677da3e9d5ba5251d9c88b525d2}
+\begin{DoxyReturn}{Returns}
+the number of non-\/zero enteries 
+\end{DoxyReturn}
+\hypertarget{class_sparse_matrix_ae0da8b29c003e7c86922fbbe5ac4cf37}{}\index{Sparse\+Matrix@{Sparse\+Matrix}!get\+\_\+row\+\_\+size@{get\+\_\+row\+\_\+size}}
+\index{get\+\_\+row\+\_\+size@{get\+\_\+row\+\_\+size}!Sparse\+Matrix@{Sparse\+Matrix}}
+\subsubsection[{get\+\_\+row\+\_\+size}]{\setlength{\rightskip}{0pt plus 5cm}int Sparse\+Matrix\+::get\+\_\+row\+\_\+size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_sparse_matrix_ae0da8b29c003e7c86922fbbe5ac4cf37}
+\begin{DoxyReturn}{Returns}
+the number of rows 
+\end{DoxyReturn}
+\hypertarget{class_sparse_matrix_a853aa94295ebeec1b72aaee542b1e6bf}{}\index{Sparse\+Matrix@{Sparse\+Matrix}!get\+\_\+size@{get\+\_\+size}}
+\index{get\+\_\+size@{get\+\_\+size}!Sparse\+Matrix@{Sparse\+Matrix}}
+\subsubsection[{get\+\_\+size}]{\setlength{\rightskip}{0pt plus 5cm}int Sparse\+Matrix\+::get\+\_\+size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_sparse_matrix_a853aa94295ebeec1b72aaee542b1e6bf}
+\begin{DoxyReturn}{Returns}
+the total size of the sparse matrix 
+\end{DoxyReturn}
+\hypertarget{class_sparse_matrix_a73c1386e4a8c0bcd5794388ab466b653}{}\index{Sparse\+Matrix@{Sparse\+Matrix}!get\+Value@{get\+Value}}
+\index{get\+Value@{get\+Value}!Sparse\+Matrix@{Sparse\+Matrix}}
+\subsubsection[{get\+Value}]{\setlength{\rightskip}{0pt plus 5cm}double Sparse\+Matrix\+::get\+Value (
+\begin{DoxyParamCaption}
+\item[{int}]{m, }
+\item[{int}]{n}
+\end{DoxyParamCaption}
+)}\label{class_sparse_matrix_a73c1386e4a8c0bcd5794388ab466b653}
+Returns the value at any particular location of the matrix A 
+\begin{DoxyParams}{Parameters}
+{\em m} & Row number \\
+\hline
+{\em n} & Column number \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A\mbox{[}m\mbox{]}\mbox{[}n\mbox{]} 
+\end{DoxyReturn}
+\hypertarget{class_sparse_matrix_a162de2c1ddf9ab27aa45f96e8a3b03ae}{}\index{Sparse\+Matrix@{Sparse\+Matrix}!initialize@{initialize}}
+\index{initialize@{initialize}!Sparse\+Matrix@{Sparse\+Matrix}}
+\subsubsection[{initialize}]{\setlength{\rightskip}{0pt plus 5cm}void Sparse\+Matrix\+::initialize (
+\begin{DoxyParamCaption}
+\item[{int}]{N}
+\end{DoxyParamCaption}
+)}\label{class_sparse_matrix_a162de2c1ddf9ab27aa45f96e8a3b03ae}
+
+
+Allocates the size of the sparse matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em N} & size to be allocated for sparse matrix \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_sparse_matrix_ad67080fca9273a1660f55e6e0b8b6a2d}{}\index{Sparse\+Matrix@{Sparse\+Matrix}!multiply@{multiply}}
+\index{multiply@{multiply}!Sparse\+Matrix@{Sparse\+Matrix}}
+\subsubsection[{multiply}]{\setlength{\rightskip}{0pt plus 5cm}void Sparse\+Matrix\+::multiply (
+\begin{DoxyParamCaption}
+\item[{{\bf Vector}$<$ double $>$ \&}]{vec, }
+\item[{{\bf Vector}$<$ double $>$ \&}]{temp}
+\end{DoxyParamCaption}
+)}\label{class_sparse_matrix_ad67080fca9273a1660f55e6e0b8b6a2d}
+
+
+Multiplication of a matrix with a vector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vec} & \hyperlink{class_vector}{Vector} which is multiplied with the sparse matrix\\
+\hline
+{\em temp} & Resulting \hyperlink{class_vector}{Vector} of the multiplication \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_sparse_matrix_aef1b60f3004d7b4d686d8f267ab02de9}{}\index{Sparse\+Matrix@{Sparse\+Matrix}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!Sparse\+Matrix@{Sparse\+Matrix}}
+\subsubsection[{operator$\ast$}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vector}$<$ double $>$ Sparse\+Matrix\+::operator$\ast$ (
+\begin{DoxyParamCaption}
+\item[{{\bf Vector}$<$ double $>$}]{vec}
+\end{DoxyParamCaption}
+)}\label{class_sparse_matrix_aef1b60f3004d7b4d686d8f267ab02de9}
+
+
+Operator overloaded. 
+
+Multiply matrix with a vector
+
+Matrix A is in sparse form
+
+
+\begin{DoxyParams}{Parameters}
+{\em vec} & \hyperlink{class_vector}{Vector}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{class_vector}{Vector} 
+\end{DoxyReturn}
+\hypertarget{class_sparse_matrix_a486aee279efaf3f2bdf7d9529d99cf32}{}\index{Sparse\+Matrix@{Sparse\+Matrix}!resize\+\_\+matrix@{resize\+\_\+matrix}}
+\index{resize\+\_\+matrix@{resize\+\_\+matrix}!Sparse\+Matrix@{Sparse\+Matrix}}
+\subsubsection[{resize\+\_\+matrix}]{\setlength{\rightskip}{0pt plus 5cm}void Sparse\+Matrix\+::resize\+\_\+matrix (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_sparse_matrix_a486aee279efaf3f2bdf7d9529d99cf32}
+
+
+resize the matrix when number of non-\/zero element exceeds the size of vector 
+
+\hypertarget{class_sparse_matrix_afa19deb4d52146d5fb938d43d4eb896d}{}\index{Sparse\+Matrix@{Sparse\+Matrix}!set\+\_\+size\+\_\+\+I@{set\+\_\+size\+\_\+\+I}}
+\index{set\+\_\+size\+\_\+\+I@{set\+\_\+size\+\_\+\+I}!Sparse\+Matrix@{Sparse\+Matrix}}
+\subsubsection[{set\+\_\+size\+\_\+\+I}]{\setlength{\rightskip}{0pt plus 5cm}void Sparse\+Matrix\+::set\+\_\+size\+\_\+\+I (
+\begin{DoxyParamCaption}
+\item[{int}]{N}
+\end{DoxyParamCaption}
+)}\label{class_sparse_matrix_afa19deb4d52146d5fb938d43d4eb896d}
+\hypertarget{class_sparse_matrix_acd4fd555b1a73dd1e5448b41b9026d54}{}\index{Sparse\+Matrix@{Sparse\+Matrix}!set\+\_\+size\+\_\+\+J@{set\+\_\+size\+\_\+\+J}}
+\index{set\+\_\+size\+\_\+\+J@{set\+\_\+size\+\_\+\+J}!Sparse\+Matrix@{Sparse\+Matrix}}
+\subsubsection[{set\+\_\+size\+\_\+\+J}]{\setlength{\rightskip}{0pt plus 5cm}void Sparse\+Matrix\+::set\+\_\+size\+\_\+\+J (
+\begin{DoxyParamCaption}
+\item[{int}]{N}
+\end{DoxyParamCaption}
+)}\label{class_sparse_matrix_acd4fd555b1a73dd1e5448b41b9026d54}
+\hypertarget{class_sparse_matrix_a1317a1d66aa80814ba177429ce2873e1}{}\index{Sparse\+Matrix@{Sparse\+Matrix}!update\+\_\+matrix@{update\+\_\+matrix}}
+\index{update\+\_\+matrix@{update\+\_\+matrix}!Sparse\+Matrix@{Sparse\+Matrix}}
+\subsubsection[{update\+\_\+matrix}]{\setlength{\rightskip}{0pt plus 5cm}void Sparse\+Matrix\+::update\+\_\+matrix (
+\begin{DoxyParamCaption}
+\item[{double}]{temp, }
+\item[{int}]{R\+O\+W, }
+\item[{int}]{C\+O\+L}
+\end{DoxyParamCaption}
+)}\label{class_sparse_matrix_a1317a1d66aa80814ba177429ce2873e1}
+
+
+Update the matrix whenever a non zero entry comes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em R\+O\+W} & Row number\\
+\hline
+{\em C\+O\+L} & column number\\
+\hline
+{\em temp} & the value to be stored at (R\+O\+W,C\+O\+L) \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_sparse_matrix_aa772cb0ed69d4b4ceca72987f5cd4043}{}\index{Sparse\+Matrix@{Sparse\+Matrix}!update\+\_\+matrix\+\_\+\+I\+L\+U@{update\+\_\+matrix\+\_\+\+I\+L\+U}}
+\index{update\+\_\+matrix\+\_\+\+I\+L\+U@{update\+\_\+matrix\+\_\+\+I\+L\+U}!Sparse\+Matrix@{Sparse\+Matrix}}
+\subsubsection[{update\+\_\+matrix\+\_\+\+I\+L\+U}]{\setlength{\rightskip}{0pt plus 5cm}void Sparse\+Matrix\+::update\+\_\+matrix\+\_\+\+I\+L\+U (
+\begin{DoxyParamCaption}
+\item[{double}]{temp, }
+\item[{int}]{R\+O\+W, }
+\item[{int}]{C\+O\+L}
+\end{DoxyParamCaption}
+)}\label{class_sparse_matrix_aa772cb0ed69d4b4ceca72987f5cd4043}
+
+
+Change the value of the matrix at (R\+O\+W,C\+O\+L) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em temp} & new value\\
+\hline
+{\em R\+O\+W} & Row number\\
+\hline
+{\em C\+O\+L} & Column number \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_sparse_matrix_a3ed1cb2b0a0dd4b6c7220c49d6535efb}{}\index{Sparse\+Matrix@{Sparse\+Matrix}!Elements@{Elements}}
+\index{Elements@{Elements}!Sparse\+Matrix@{Sparse\+Matrix}}
+\subsubsection[{Elements}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vector}$<$double$>$ Sparse\+Matrix\+::\+Elements\hspace{0.3cm}{\ttfamily [private]}}\label{class_sparse_matrix_a3ed1cb2b0a0dd4b6c7220c49d6535efb}
+
+
+\hyperlink{class_vector}{Vector} containing the elements of the matrix A. 
+
+\hypertarget{class_sparse_matrix_ab44942445ac457aaa6e984615fcf7b49}{}\index{Sparse\+Matrix@{Sparse\+Matrix}!I@{I}}
+\index{I@{I}!Sparse\+Matrix@{Sparse\+Matrix}}
+\subsubsection[{I}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vector}$<$int$>$ Sparse\+Matrix\+::\+I\hspace{0.3cm}{\ttfamily [private]}}\label{class_sparse_matrix_ab44942445ac457aaa6e984615fcf7b49}
+
+
+\hyperlink{class_vector}{Vector} containing the row information about the matrix A. 
+
+\hypertarget{class_sparse_matrix_a9febac8d56047bfcb48c6849f9b8ebcd}{}\index{Sparse\+Matrix@{Sparse\+Matrix}!J@{J}}
+\index{J@{J}!Sparse\+Matrix@{Sparse\+Matrix}}
+\subsubsection[{J}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vector}$<$int$>$ Sparse\+Matrix\+::\+J\hspace{0.3cm}{\ttfamily [private]}}\label{class_sparse_matrix_a9febac8d56047bfcb48c6849f9b8ebcd}
+
+
+\hyperlink{class_vector}{Vector} containing the column information about the matrix A. 
+
+\hypertarget{class_sparse_matrix_aad150f4ad676a2919a478457e7c050d3}{}\index{Sparse\+Matrix@{Sparse\+Matrix}!number\+\_\+of\+\_\+non\+\_\+zero@{number\+\_\+of\+\_\+non\+\_\+zero}}
+\index{number\+\_\+of\+\_\+non\+\_\+zero@{number\+\_\+of\+\_\+non\+\_\+zero}!Sparse\+Matrix@{Sparse\+Matrix}}
+\subsubsection[{number\+\_\+of\+\_\+non\+\_\+zero}]{\setlength{\rightskip}{0pt plus 5cm}int Sparse\+Matrix\+::number\+\_\+of\+\_\+non\+\_\+zero\hspace{0.3cm}{\ttfamily [private]}}\label{class_sparse_matrix_aad150f4ad676a2919a478457e7c050d3}
+
+
+Number of non-\/zero enteries in sparse matrix. 
+
+\hypertarget{class_sparse_matrix_a5f84c3e572c129bbef55d4e9343abd1b}{}\index{Sparse\+Matrix@{Sparse\+Matrix}!number\+\_\+of\+\_\+rows@{number\+\_\+of\+\_\+rows}}
+\index{number\+\_\+of\+\_\+rows@{number\+\_\+of\+\_\+rows}!Sparse\+Matrix@{Sparse\+Matrix}}
+\subsubsection[{number\+\_\+of\+\_\+rows}]{\setlength{\rightskip}{0pt plus 5cm}int Sparse\+Matrix\+::number\+\_\+of\+\_\+rows\hspace{0.3cm}{\ttfamily [private]}}\label{class_sparse_matrix_a5f84c3e572c129bbef55d4e9343abd1b}
+
+
+Number of rows in the sparse matrix. 
+
+\hypertarget{class_sparse_matrix_ab741b7b30296448a3f004d8a5c24fc33}{}\index{Sparse\+Matrix@{Sparse\+Matrix}!size\+\_\+of\+\_\+array@{size\+\_\+of\+\_\+array}}
+\index{size\+\_\+of\+\_\+array@{size\+\_\+of\+\_\+array}!Sparse\+Matrix@{Sparse\+Matrix}}
+\subsubsection[{size\+\_\+of\+\_\+array}]{\setlength{\rightskip}{0pt plus 5cm}int Sparse\+Matrix\+::size\+\_\+of\+\_\+array\hspace{0.3cm}{\ttfamily [private]}}\label{class_sparse_matrix_ab741b7b30296448a3f004d8a5c24fc33}
+
+
+Size of the sparse matrix. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_sparse_matrix_8h}{Sparse\+Matrix.\+h}\item 
+\hyperlink{_sparse_matrix_8cpp}{Sparse\+Matrix.\+cpp}\end{DoxyCompactItemize}

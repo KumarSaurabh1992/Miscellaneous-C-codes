@@ -1,0 +1,259 @@
+\hypertarget{class_iterative___solver}{}\section{Iterative\+\_\+\+Solver Class Reference}
+\label{class_iterative___solver}\index{Iterative\+\_\+\+Solver@{Iterative\+\_\+\+Solver}}
+
+
+This class solves the linear equation A\+X = B.  
+
+
+
+
+{\ttfamily \#include $<$Iterative\+Solver.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_iterative___solver_a5f6fa52bb561e2bc9bb4fee12304de2e}{Gauss\+\_\+\+Siedel} (\hyperlink{class_sparse_matrix}{Sparse\+Matrix} \&spm, \hyperlink{class_vector}{Vector}$<$ double $>$ \&X, \hyperlink{class_vector}{Vector}$<$ double $>$ \&B)
+\begin{DoxyCompactList}\small\item\em Solves A\+X = B with Gauss Seidel Method. \end{DoxyCompactList}\item 
+void \hyperlink{class_iterative___solver_a1ce6f374949235fc666cc9ad7f958c33}{C\+G} (\hyperlink{class_sparse_matrix}{Sparse\+Matrix} \&spm, \hyperlink{class_vector}{Vector}$<$ double $>$ \&X, \hyperlink{class_vector}{Vector}$<$ double $>$ \&B)
+\item 
+void \hyperlink{class_iterative___solver_abec8727d865cd322af371d191671e98f}{Bi\+C\+G} (\hyperlink{class_sparse_matrix}{Sparse\+Matrix} \&spm, \hyperlink{class_vector}{Vector}$<$ double $>$ \&X, \hyperlink{class_vector}{Vector}$<$ double $>$ \&B)
+\begin{DoxyCompactList}\small\item\em Solves A\+X = B with Bi\+Conjugate Gradient Method. \end{DoxyCompactList}\item 
+void \hyperlink{class_iterative___solver_a053c9f6e2b9b0920c97f977b5614aac6}{Bi\+C\+G\+\_\+preconditioner} (\hyperlink{class_sparse_matrix}{Sparse\+Matrix} \&, \hyperlink{class_vector}{Vector}$<$ double $>$ \&, \hyperlink{class_vector}{Vector}$<$ double $>$ \&, int)
+\begin{DoxyCompactList}\small\item\em Solves A\+X = B with Biconjugate preconditioner. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{class_iterative___solver_aa7791b558e5275c24a8c83f2c2a7f3dc}{cal\+\_\+error} (\hyperlink{class_vector}{Vector}$<$ double $>$ \&X, \hyperlink{class_vector}{Vector}$<$ double $>$ \&X1)
+\begin{DoxyCompactList}\small\item\em This calculates the error based on the relative difference between two points. \end{DoxyCompactList}\item 
+void \hyperlink{class_iterative___solver_a5ea23a7eeb6b249e72135b29dfa999c6}{I\+L\+U\+Decomposition} (\hyperlink{class_sparse_matrix}{Sparse\+Matrix} \&spm)
+\begin{DoxyCompactList}\small\item\em Computes the I\+L\+U Decomposition of the Matrix A in the sparse form. \end{DoxyCompactList}\item 
+void \hyperlink{class_iterative___solver_a78d512adb0d8bc5c57ba25fd6f108b4d}{forward\+\_\+substitution} (\hyperlink{class_sparse_matrix}{Sparse\+Matrix} \&, \hyperlink{class_vector}{Vector}$<$ double $>$ \&, \hyperlink{class_vector}{Vector}$<$ double $>$ \&)
+\begin{DoxyCompactList}\small\item\em Solves A\+X = B with by forward substitution. \end{DoxyCompactList}\item 
+void \hyperlink{class_iterative___solver_a64e45de652219f1e8f81cb6a0b8a2471}{backward\+\_\+substitution} (\hyperlink{class_sparse_matrix}{Sparse\+Matrix} \&, \hyperlink{class_vector}{Vector}$<$ double $>$ \&, \hyperlink{class_vector}{Vector}$<$ double $>$ \&)
+\begin{DoxyCompactList}\small\item\em Solves A\+X = B with by backward substitution. \end{DoxyCompactList}\item 
+void \hyperlink{class_iterative___solver_af1b218cc13ec99a6b102036aa9a7ee56}{forward\+\_\+substitution\+\_\+\+Gauss\+\_\+\+Siedel} (\hyperlink{class_sparse_matrix}{Sparse\+Matrix} \&, \hyperlink{class_vector}{Vector}$<$ double $>$ \&, \hyperlink{class_vector}{Vector}$<$ double $>$ \&)
+\begin{DoxyCompactList}\small\item\em Solves A\+X = B with by forward substitution for Gauss Seidel Preconditioner. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_vector}{Vector}$<$ double $>$ \hyperlink{class_iterative___solver_a6b7e88dbcac7472f9b9a2540a9bfe0a3}{temp}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class solves the linear equation A\+X = B. 
+
+\begin{DoxyAuthor}{Author}
+Kumar Saurabh (M\+A14\+M004) 
+\end{DoxyAuthor}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_iterative___solver_a64e45de652219f1e8f81cb6a0b8a2471}{}\index{Iterative\+\_\+\+Solver@{Iterative\+\_\+\+Solver}!backward\+\_\+substitution@{backward\+\_\+substitution}}
+\index{backward\+\_\+substitution@{backward\+\_\+substitution}!Iterative\+\_\+\+Solver@{Iterative\+\_\+\+Solver}}
+\subsubsection[{backward\+\_\+substitution}]{\setlength{\rightskip}{0pt plus 5cm}void Iterative\+\_\+\+Solver\+::backward\+\_\+substitution (
+\begin{DoxyParamCaption}
+\item[{{\bf Sparse\+Matrix} \&}]{spm, }
+\item[{{\bf Vector}$<$ double $>$ \&}]{X, }
+\item[{{\bf Vector}$<$ double $>$ \&}]{B}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_iterative___solver_a64e45de652219f1e8f81cb6a0b8a2471}
+
+
+Solves A\+X = B with by backward substitution. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em spm} & Matrix A in sparse format and is Upper Triangular Matrix\\
+\hline
+{\em X} & \hyperlink{class_vector}{Vector} x\\
+\hline
+{\em B} & \hyperlink{class_vector}{Vector} B \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_iterative___solver_abec8727d865cd322af371d191671e98f}{}\index{Iterative\+\_\+\+Solver@{Iterative\+\_\+\+Solver}!Bi\+C\+G@{Bi\+C\+G}}
+\index{Bi\+C\+G@{Bi\+C\+G}!Iterative\+\_\+\+Solver@{Iterative\+\_\+\+Solver}}
+\subsubsection[{Bi\+C\+G}]{\setlength{\rightskip}{0pt plus 5cm}void Iterative\+\_\+\+Solver\+::\+Bi\+C\+G (
+\begin{DoxyParamCaption}
+\item[{{\bf Sparse\+Matrix} \&}]{spm, }
+\item[{{\bf Vector}$<$ double $>$ \&}]{X, }
+\item[{{\bf Vector}$<$ double $>$ \&}]{B}
+\end{DoxyParamCaption}
+)}\label{class_iterative___solver_abec8727d865cd322af371d191671e98f}
+
+
+Solves A\+X = B with Bi\+Conjugate Gradient Method. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em spm} & Matrix A in sparse format\\
+\hline
+{\em X} & \hyperlink{class_vector}{Vector} x\\
+\hline
+{\em B} & \hyperlink{class_vector}{Vector} B\\
+\hline
+\end{DoxyParams}
+This code doesn\textquotesingle{}t make use of any preconditioner \hypertarget{class_iterative___solver_a053c9f6e2b9b0920c97f977b5614aac6}{}\index{Iterative\+\_\+\+Solver@{Iterative\+\_\+\+Solver}!Bi\+C\+G\+\_\+preconditioner@{Bi\+C\+G\+\_\+preconditioner}}
+\index{Bi\+C\+G\+\_\+preconditioner@{Bi\+C\+G\+\_\+preconditioner}!Iterative\+\_\+\+Solver@{Iterative\+\_\+\+Solver}}
+\subsubsection[{Bi\+C\+G\+\_\+preconditioner}]{\setlength{\rightskip}{0pt plus 5cm}void Iterative\+\_\+\+Solver\+::\+Bi\+C\+G\+\_\+preconditioner (
+\begin{DoxyParamCaption}
+\item[{{\bf Sparse\+Matrix} \&}]{spm, }
+\item[{{\bf Vector}$<$ double $>$ \&}]{X, }
+\item[{{\bf Vector}$<$ double $>$ \&}]{B, }
+\item[{int}]{choice}
+\end{DoxyParamCaption}
+)}\label{class_iterative___solver_a053c9f6e2b9b0920c97f977b5614aac6}
+
+
+Solves A\+X = B with Biconjugate preconditioner. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em spm} & Matrix A in sparse format\\
+\hline
+{\em X} & \hyperlink{class_vector}{Vector} X\\
+\hline
+{\em B} & \hyperlink{class_vector}{Vector} B\\
+\hline
+{\em choice} & the type of preconditioner\\
+\hline
+\end{DoxyParams}
+This code uses three preconditioner\+:
+
+
+\begin{DoxyEnumerate}
+\item Jacobi preconditioner
+\item I\+L\+U preconditioner
+\item Gauss Sedel preconditioner
+\end{DoxyEnumerate}
+
+The type of preconditioner is asked by the user at the runtime \hypertarget{class_iterative___solver_aa7791b558e5275c24a8c83f2c2a7f3dc}{}\index{Iterative\+\_\+\+Solver@{Iterative\+\_\+\+Solver}!cal\+\_\+error@{cal\+\_\+error}}
+\index{cal\+\_\+error@{cal\+\_\+error}!Iterative\+\_\+\+Solver@{Iterative\+\_\+\+Solver}}
+\subsubsection[{cal\+\_\+error}]{\setlength{\rightskip}{0pt plus 5cm}double Iterative\+\_\+\+Solver\+::cal\+\_\+error (
+\begin{DoxyParamCaption}
+\item[{{\bf Vector}$<$ double $>$ \&}]{X, }
+\item[{{\bf Vector}$<$ double $>$ \&}]{X1}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_iterative___solver_aa7791b558e5275c24a8c83f2c2a7f3dc}
+
+
+This calculates the error based on the relative difference between two points. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em X} & \hyperlink{class_vector}{Vector} X\\
+\hline
+{\em X1} & \hyperlink{class_vector}{Vector} X1 \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_iterative___solver_a1ce6f374949235fc666cc9ad7f958c33}{}\index{Iterative\+\_\+\+Solver@{Iterative\+\_\+\+Solver}!C\+G@{C\+G}}
+\index{C\+G@{C\+G}!Iterative\+\_\+\+Solver@{Iterative\+\_\+\+Solver}}
+\subsubsection[{C\+G}]{\setlength{\rightskip}{0pt plus 5cm}void Iterative\+\_\+\+Solver\+::\+C\+G (
+\begin{DoxyParamCaption}
+\item[{{\bf Sparse\+Matrix} \&}]{spm, }
+\item[{{\bf Vector}$<$ double $>$ \&}]{X, }
+\item[{{\bf Vector}$<$ double $>$ \&}]{B}
+\end{DoxyParamCaption}
+)}\label{class_iterative___solver_a1ce6f374949235fc666cc9ad7f958c33}
+\hypertarget{class_iterative___solver_a78d512adb0d8bc5c57ba25fd6f108b4d}{}\index{Iterative\+\_\+\+Solver@{Iterative\+\_\+\+Solver}!forward\+\_\+substitution@{forward\+\_\+substitution}}
+\index{forward\+\_\+substitution@{forward\+\_\+substitution}!Iterative\+\_\+\+Solver@{Iterative\+\_\+\+Solver}}
+\subsubsection[{forward\+\_\+substitution}]{\setlength{\rightskip}{0pt plus 5cm}void Iterative\+\_\+\+Solver\+::forward\+\_\+substitution (
+\begin{DoxyParamCaption}
+\item[{{\bf Sparse\+Matrix} \&}]{spm, }
+\item[{{\bf Vector}$<$ double $>$ \&}]{X, }
+\item[{{\bf Vector}$<$ double $>$ \&}]{B}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_iterative___solver_a78d512adb0d8bc5c57ba25fd6f108b4d}
+
+
+Solves A\+X = B with by forward substitution. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em spm} & Matrix A in sparse format and is Lower Triangular Matrix\\
+\hline
+{\em X} & \hyperlink{class_vector}{Vector} x\\
+\hline
+{\em B} & \hyperlink{class_vector}{Vector} B \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_iterative___solver_af1b218cc13ec99a6b102036aa9a7ee56}{}\index{Iterative\+\_\+\+Solver@{Iterative\+\_\+\+Solver}!forward\+\_\+substitution\+\_\+\+Gauss\+\_\+\+Siedel@{forward\+\_\+substitution\+\_\+\+Gauss\+\_\+\+Siedel}}
+\index{forward\+\_\+substitution\+\_\+\+Gauss\+\_\+\+Siedel@{forward\+\_\+substitution\+\_\+\+Gauss\+\_\+\+Siedel}!Iterative\+\_\+\+Solver@{Iterative\+\_\+\+Solver}}
+\subsubsection[{forward\+\_\+substitution\+\_\+\+Gauss\+\_\+\+Siedel}]{\setlength{\rightskip}{0pt plus 5cm}void Iterative\+\_\+\+Solver\+::forward\+\_\+substitution\+\_\+\+Gauss\+\_\+\+Siedel (
+\begin{DoxyParamCaption}
+\item[{{\bf Sparse\+Matrix} \&}]{spm, }
+\item[{{\bf Vector}$<$ double $>$ \&}]{X, }
+\item[{{\bf Vector}$<$ double $>$ \&}]{B}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_iterative___solver_af1b218cc13ec99a6b102036aa9a7ee56}
+
+
+Solves A\+X = B with by forward substitution for Gauss Seidel Preconditioner. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em spm} & Matrix A in sparse format and is Lower Triangular Matrix\\
+\hline
+{\em X} & \hyperlink{class_vector}{Vector} x\\
+\hline
+{\em B} & \hyperlink{class_vector}{Vector} B \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_iterative___solver_a5f6fa52bb561e2bc9bb4fee12304de2e}{}\index{Iterative\+\_\+\+Solver@{Iterative\+\_\+\+Solver}!Gauss\+\_\+\+Siedel@{Gauss\+\_\+\+Siedel}}
+\index{Gauss\+\_\+\+Siedel@{Gauss\+\_\+\+Siedel}!Iterative\+\_\+\+Solver@{Iterative\+\_\+\+Solver}}
+\subsubsection[{Gauss\+\_\+\+Siedel}]{\setlength{\rightskip}{0pt plus 5cm}void Iterative\+\_\+\+Solver\+::\+Gauss\+\_\+\+Siedel (
+\begin{DoxyParamCaption}
+\item[{{\bf Sparse\+Matrix} \&}]{spm, }
+\item[{{\bf Vector}$<$ double $>$ \&}]{X, }
+\item[{{\bf Vector}$<$ double $>$ \&}]{B}
+\end{DoxyParamCaption}
+)}\label{class_iterative___solver_a5f6fa52bb561e2bc9bb4fee12304de2e}
+
+
+Solves A\+X = B with Gauss Seidel Method. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em spm} & Matrix A in sparse format\\
+\hline
+{\em X} & \hyperlink{class_vector}{Vector} x\\
+\hline
+{\em B} & \hyperlink{class_vector}{Vector} B\\
+\hline
+\end{DoxyParams}
+This code can be used in following way\+:
+
+relaxation parameter\+: Between 0 and 1\+: under relaxation
+
+relaxation parameter 1\+: No relaxation
+
+relaxation parameter\+: Between 1 and 2 Over relaxation
+
+The value of relaxation is asked by user at the runtime \hypertarget{class_iterative___solver_a5ea23a7eeb6b249e72135b29dfa999c6}{}\index{Iterative\+\_\+\+Solver@{Iterative\+\_\+\+Solver}!I\+L\+U\+Decomposition@{I\+L\+U\+Decomposition}}
+\index{I\+L\+U\+Decomposition@{I\+L\+U\+Decomposition}!Iterative\+\_\+\+Solver@{Iterative\+\_\+\+Solver}}
+\subsubsection[{I\+L\+U\+Decomposition}]{\setlength{\rightskip}{0pt plus 5cm}void Iterative\+\_\+\+Solver\+::\+I\+L\+U\+Decomposition (
+\begin{DoxyParamCaption}
+\item[{{\bf Sparse\+Matrix} \&}]{spm}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_iterative___solver_a5ea23a7eeb6b249e72135b29dfa999c6}
+
+
+Computes the I\+L\+U Decomposition of the Matrix A in the sparse form. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em spm} & Matrix A in the sparse form \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_iterative___solver_a6b7e88dbcac7472f9b9a2540a9bfe0a3}{}\index{Iterative\+\_\+\+Solver@{Iterative\+\_\+\+Solver}!temp@{temp}}
+\index{temp@{temp}!Iterative\+\_\+\+Solver@{Iterative\+\_\+\+Solver}}
+\subsubsection[{temp}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vector}$<$double$>$ Iterative\+\_\+\+Solver\+::temp\hspace{0.3cm}{\ttfamily [private]}}\label{class_iterative___solver_a6b7e88dbcac7472f9b9a2540a9bfe0a3}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_iterative_solver_8h}{Iterative\+Solver.\+h}\item 
+\hyperlink{_iterative_solver_8cpp}{Iterative\+Solver.\+cpp}\end{DoxyCompactItemize}

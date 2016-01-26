@@ -1,0 +1,23 @@
+var searchData=
+[
+  ['gama',['gama',['../class_compute_matrix.html#a4ce47d86505bff39d030ee28dceb1ca4',1,'ComputeMatrix']]],
+  ['gauss_5fsiedel',['Gauss_Siedel',['../class_iterative___solver.html#a5f6fa52bb561e2bc9bb4fee12304de2e',1,'Iterative_Solver']]],
+  ['get_5fboundary_5fcondition',['get_boundary_condition',['../class_compute_matrix.html#a01bd56d57608380a263f0ae4701a2634',1,'ComputeMatrix']]],
+  ['get_5fdata',['get_data',['../class_sparse_matrix.html#a5d4c3ed7f638b2376d12e62489823880',1,'SparseMatrix']]],
+  ['get_5fh',['get_h',['../class_compute_matrix.html#ac6cc697a109dfdc3a27a4ef2bc131b67',1,'ComputeMatrix']]],
+  ['get_5fh_5fafter',['get_h_after',['../class_compute_matrix.html#a71153b108b46b7863ff9ee93733991ce',1,'ComputeMatrix']]],
+  ['get_5fh_5fbefore',['get_h_before',['../class_compute_matrix.html#a4017aead911acf0cf8507436049f1d8e',1,'ComputeMatrix']]],
+  ['get_5fi',['get_I',['../class_sparse_matrix.html#a39da3940234cffada544a89556812ba3',1,'SparseMatrix']]],
+  ['get_5fj',['get_J',['../class_sparse_matrix.html#a0bef0481e55d37959087534701b971d2',1,'SparseMatrix']]],
+  ['get_5fk',['get_k',['../class_compute_matrix.html#ac5fb641268db73cc0f376bf40e406d1f',1,'ComputeMatrix']]],
+  ['get_5fk_5fafter',['get_k_after',['../class_compute_matrix.html#aca571a6ea7337ea7a2e581eeb29c3edb',1,'ComputeMatrix']]],
+  ['get_5fk_5fbefore',['get_k_before',['../class_compute_matrix.html#a505ffbdcec8dc113d9594549a411814e',1,'ComputeMatrix']]],
+  ['get_5fnon_5fzero_5felements',['get_non_zero_Elements',['../class_sparse_matrix.html#a6ca05f8e391c80f7e2cb33a9e0801eeb',1,'SparseMatrix']]],
+  ['get_5fnon_5fzero_5fenteries',['get_non_zero_enteries',['../class_sparse_matrix.html#a17952677da3e9d5ba5251d9c88b525d2',1,'SparseMatrix']]],
+  ['get_5fnumber_5fof_5fdivision_5fx',['get_number_of_division_x',['../class_compute_matrix.html#a35f69618292d8a05d78158715f1a8691',1,'ComputeMatrix']]],
+  ['get_5fnumber_5fof_5fdivision_5fy',['get_number_of_division_y',['../class_compute_matrix.html#af726fb06dd8cc67d1d52ec3b9357b287',1,'ComputeMatrix']]],
+  ['get_5frow_5fsize',['get_row_size',['../class_sparse_matrix.html#ae0da8b29c003e7c86922fbbe5ac4cf37',1,'SparseMatrix']]],
+  ['get_5fsize',['get_size',['../class_sparse_matrix.html#a853aa94295ebeec1b72aaee542b1e6bf',1,'SparseMatrix::get_size()'],['../class_vector.html#a7e3c8454662725ab7a7d3ad64b8b0eb1',1,'Vector::get_size()']]],
+  ['getdata',['getData',['../class_vector.html#a5cdce317c4c74592fcb64fd3dde6ce49',1,'Vector']]],
+  ['getvalue',['getValue',['../class_sparse_matrix.html#a73c1386e4a8c0bcd5794388ab466b653',1,'SparseMatrix']]]
+];
